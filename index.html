@@ -685,12 +685,12 @@
             </li>
             <li
               id="toggleMarkers"
-              data-tip="特点: 单击以切换，拖动以改变图层。按住 Ctrl+左键 以编辑图层样式"
+              data-tip="标记: 单击以切换，拖动以改变图层。按住 Ctrl+左键 以编辑图层样式"
               data-shortcut="K"
               class="buttonoff"
               onclick="toggleMarkers(event)"
             >
-              特点[K]
+              标记[K]
             </li>
             <li
               id="toggleRulers"
@@ -778,7 +778,7 @@
             <option value="lakes">湖</option>
             <option value="landmass">陆地</option>
             <option value="legend">图例</option>
-            <option value="markers">特点</option>
+            <option value="markers">标记</option>
             <option value="armies">军事</option>
             <option value="ocean">海洋</option>
             <option value="population">人口</option>
@@ -2005,8 +2005,8 @@
             >
               军事
             </button>
-            <button id="overviewMarkersButton" data-tip="单击以打开特点概述" data-shortcut="Shift + K">
-              特点
+            <button id="overviewMarkersButton" data-tip="单击以打开标记概述" data-shortcut="Shift + K">
+              标记
             </button>
             <button id="overviewCellsButton" data-tip="单击打开单元格详细信息视图" data-shortcut="Shift + E">
               单元格
@@ -2062,8 +2062,8 @@
               军事
             </button>
             <button id="regenerateIce" data-tip="单击以重新生成冰山和冰川">冰川</button>
-            <button id="regenerateMarkers" data-tip="单击以重新生成未锁定特点">
-              特点 <i id="configRegenerateMarkers" class="icon-cog" data-tip="单击以设置数字乘数"></i>
+            <button id="regenerateMarkers" data-tip="单击以重新生成未锁定标记">
+              标记 <i id="configRegenerateMarkers" class="icon-cog" data-tip="单击以设置数字乘数"></i>
             </button>
             <button
               id="regenerateZones"
@@ -2099,10 +2099,10 @@
             <button id="addRoute" data-tip="单击地图以放置路线" data-shortcut="Shift + 4">路线</button>
             <button
               id="addMarker"
-              data-tip="单击地图以放置特点。按住Shift键可添加多个"
+              data-tip="单击地图以放置标记。按住Shift键可添加多个"
               data-shortcut="Shift + 5"
             >
-              特点
+              标记
             </button>
           </div>
 
@@ -3086,7 +3086,7 @@
               </div>
 
               <div data-tip="选择优势文化">
-                <div class="label">文化e:</div>
+                <div class="label">文化:</div>
                 <select id="burgCulture" style="width: 8em"></select>
                 <span
                   id="burgNameReCulture"
@@ -3247,22 +3247,22 @@
       <div id="markerEditor" class="dialog" style="display: none">
         <div id="markerBody" style="padding-bottom: 0.3em">
           <div
-            data-tip="特点类型。样式更改将应用于相同类型的所有特色。如果特色是唯一的，则留空"
+            data-tip="标记类型。样式更改将应用于相同类型的所有特色。如果特色是唯一的，则留空"
           >
             <div class="label">类型:</div>
             <input id="markerType" style="width: 10.3em" />
           </div>
 
-          <div data-tip="Marker icon. Paste any Unicode symbol or select from the predefined list">
-            <div class="label">Icon:</div>
+          <div data-tip="标记图标。粘贴任何Unicode符号或从预定义列表中选择">
+            <div class="label">图标:</div>
             <input id="markerIcon" style="width: 5em" />
             <button id="markerIconSelect" style="width: 5em">select</button>
           </div>
 
-          <div data-tip="Marker marker element and icon sizes in pixels">
-            <div class="label">Size:</div>
+          <div data-tip="标记元素和图标大小（像素）">
+            <div class="label">大小:</div>
             <input
-              data-tip="Marker element size in pixels"
+              data-tip="元素大小（像素）"
               id="markerSize"
               type="number"
               min="2"
@@ -3270,7 +3270,7 @@
               style="width: 5em"
             />
             <input
-              data-tip="Marker icon sizes in pixels"
+              data-tip="图标大小（像素）"
               id="markerIconSize"
               type="number"
               min="2"
@@ -3280,45 +3280,45 @@
             />
           </div>
 
-          <div data-tip="Marker icon shift (by X and by Y axis), percent. Set to 50 to position icon in center">
-            <div class="label">Icon shift:</div>
+          <div data-tip="图标偏移（X轴和Y轴），百分比。设置为50以将图标置于中心">
+            <div class="label">图标偏移:</div>
             <input id="markerIconShiftX" type="number" min="0" max="100" step="1" style="width: 5em" />
             <input id="markerIconShiftY" type="number" min="0" max="100" step="1" style="width: 5em" />
           </div>
 
-          <div data-tip="Marker pin shape">
-            <div class="label">Pin shape:</div>
+          <div data-tip="图标轮廓形状">
+            <div class="label">轮廓形状:</div>
             <select id="markerPin" style="width: 10.3em">
-              <option value="bubble">Bubble</option>
-              <option value="pin">Pin</option>
-              <option value="square">Square</option>
-              <option value="squarish">Squarish</option>
-              <option value="diamond">Diamond</option>
-              <option value="hex">Hex</option>
-              <option value="hexy">Hexy</option>
-              <option value="shieldy">Shieldy</option>
-              <option value="shield">Shield</option>
-              <option value="pentagon">Pentagon</option>
-              <option value="heptagon">Heptagon</option>
-              <option value="circle">Circle</option>
-              <option value="no">No</option>
+              <option value="bubble">气泡</option>
+              <option value="pin">水滴</option>
+              <option value="square">矩形</option>
+              <option value="squarish">近似矩形</option>
+              <option value="diamond">菱形</option>
+              <option value="hex">六边形</option>
+              <option value="hexy">扁六边形</option>
+              <option value="shieldy">扁盾</option>
+              <option value="shield">盾</option>
+              <option value="pentagon">五边形</option>
+              <option value="heptagon">七边形</option>
+              <option value="circle">圆形</option>
+              <option value="no">无</option>
             </select>
           </div>
 
-          <div data-tip="Pin fill and stroke colors">
-            <div class="label">Pin colors:</div>
+          <div data-tip="轮廓填充和笔划颜色">
+            <div class="label">轮廓颜色:</div>
             <input id="markerFill" type="color" style="width: 5em; height: 1.6em" />
             <input id="markerStroke" type="color" style="width: 5em; height: 1.6em" />
           </div>
         </div>
 
         <div id="markerBottom">
-          <button id="markerNotes" data-tip="Edit place legend (notes)" class="icon-edit"></button>
+          <button id="markerNotes" data-tip="编辑图例注释" class="icon-edit"></button>
           <button id="markerLock" class="icon-lock-open" onmouseover="showElementLockTip(event)"></button>
-          <button id="markerAdd" data-tip="Add additional marker of that type" class="icon-plus"></button>
+          <button id="markerAdd" data-tip="添加该类型的附加标记" class="icon-plus"></button>
           <button
             id="markerRemove"
-            data-tip="Remove the marker"
+            data-tip="删除标记"
             data-shortcut="Delete"
             class="icon-trash fastDelete"
           ></button>
@@ -3328,24 +3328,24 @@
       <div id="regimentEditor" class="dialog" style="display: none">
         <div id="regimentBody" style="padding-bottom: 0.3em">
           <div style="padding-bottom: 0.2em">
-            <button id="regimentType" data-tip="Regiment type (land or naval). Click to change"></button>
+            <button id="regimentType" data-tip="军团类型（陆上或海军）。单击以更改"></button>
             <input
               id="regimentName"
-              data-tip="Type to rename the regiment"
+              data-tip="输入以重命名军团"
               autocorrect="off"
               spellcheck="false"
               style="width: 13em"
             />
-            <span data-tip="Speak the name. You can change voice and language in options" class="speaker">🔊</span>
+            <span data-tip="发音。您可以在选项中更改语音和语言" class="speaker">🔊</span>
             <i
               id="regimentNameRestore"
-              data-tip="Click to restore regiment's default name"
+              data-tip="单击以恢复军团的默认名称"
               class="icon-ccw pointer"
             ></i>
           </div>
 
-          <div data-tip="Regiment emblem. Paste any Unicode symbol or select from the predefined list">
-            <div class="label italic">Emblem:</div>
+          <div data-tip="军团徽章。粘贴任何Unicode符号或从预定义列表中选择">
+            <div class="label italic">徽章:</div>
             <input id="regimentEmblem" style="width: 5em" />
             <button id="regimentEmblemSelect" style="padding: 0; width: 4.5em">select</button>
           </div>
@@ -3354,27 +3354,27 @@
         </div>
 
         <div id="regimentBottom">
-          <button id="regimentAttack" data-tip="Attack foreign regiment" class="icon-target"></button>
-          <button id="regimentAdd" data-tip="Create new regiment or fleet" class="icon-user-plus"></button>
-          <button id="regimentSplit" data-tip="Split regiment into 2 separate ones" class="icon-half"></button>
+          <button id="regimentAttack" data-tip="攻击外国军团" class="icon-target"></button>
+          <button id="regimentAdd" data-tip="创建新的军团或舰队" class="icon-user-plus"></button>
+          <button id="regimentSplit" data-tip="将军团分成两个单独的军团" class="icon-half"></button>
           <button
             id="regimentAttach"
-            data-tip="Attach regiment to another one (include this regiment to another one)"
+            data-tip="合并军团"
             class="icon-attach"
           ></button>
           <button
             id="regimentRegenerateLegend"
-            data-tip="Regenerate legend for this regiment"
+            data-tip="为该军团重新生成注释"
             class="icon-retweet"
           ></button>
           <button
             id="regimentLegend"
-            data-tip="Edit free text notes (legend) for this regiment"
+            data-tip="编辑注释（图例）"
             class="icon-edit"
           ></button>
           <button
             id="regimentRemove"
-            data-tip="Remove regiment"
+            data-tip="删除军团"
             data-shortcut="Delete"
             class="icon-trash fastDelete"
           ></button>
@@ -3385,18 +3385,18 @@
         <div id="battleBody">
           <template id="battlePhases_field">
             <button
-              data-tip="Skirmish phase. Ranged units excel"
+              data-tip="遭遇阶段。远程兵力优势"
               data-phase="skirmish"
               class="icon-button-skirmish"
             ></button>
-            <button data-tip="Melee phase. Melee units excel" data-phase="melee" class="icon-button-melee"></button>
+            <button data-tip="近身战，近战兵力优势" data-phase="melee" class="icon-button-melee"></button>
             <button
-              data-tip="Pursue phase. Mounted units excel"
+              data-tip="追击阶段。骑兵优势"
               data-phase="pursue"
               class="icon-button-pursue"
             ></button>
             <button
-              data-tip="Retreat phase. Units strength reduced"
+              data-tip="撤退阶段。战力降低"
               data-phase="retreat"
               class="icon-button-retreat"
             ></button>
@@ -3404,22 +3404,22 @@
 
           <template id="battlePhases_naval">
             <button
-              data-tip="Shelling phase. Naval artillery bombardment of enemy fleet"
+              data-tip="炮击阶段。舰队兵力优势"
               data-phase="shelling"
               class="icon-button-shelling"
             ></button>
             <button
-              data-tip="Boarding phase. Melee units go aboard"
+              data-tip="接舷阶段，近战兵力优势"
               data-phase="boarding"
               class="icon-button-boarding"
             ></button>
             <button
-              data-tip="Сhase phase. Naval units pursue and rarely shell enemy fleet"
+              data-tip="追击阶段。舰队专注追击，减少炮击"
               data-phase="chase"
               class="icon-button-chase"
             ></button>
             <button
-              data-tip="Withdrawal phase. Naval units try to escape enemy fleet"
+              data-tip="撤退阶段。舰队试图逃离"
               data-phase="withdrawal"
               class="icon-button-withdrawal"
             ></button>
@@ -3427,27 +3427,27 @@
 
           <template id="battlePhases_siege_attackers">
             <button
-              data-tip="Blockade phase. Prepare or hold the blockade"
+              data-tip="封锁阶段。准备或保持封锁"
               data-phase="blockade"
               class="icon-button-blockade"
             ></button>
             <button
-              data-tip="Bombardment phase. Attack enemy with machinery units"
+              data-tip="轰炸阶段。用机械装置攻击敌人"
               data-phase="bombardment"
               class="icon-button-bombardment"
             ></button>
             <button
-              data-tip="Storming phase. Storm enemy town. Melee units excel"
+              data-tip="风暴阶段。风暴袭击城镇，近战兵力优势。"
               data-phase="storming"
               class="icon-button-storming"
             ></button>
             <button
-              data-tip="Looting phase. Plunder the town. Units strength increased"
+              data-tip="劫掠阶段。洗劫这座城市。士兵强度增加"
               data-phase="looting"
               class="icon-button-looting"
             ></button>
             <button
-              data-tip="Retreat phase. Units strength reduced"
+              data-tip="撤退阶段。士兵强度降低"
               data-phase="retreat"
               class="icon-button-retreat"
             ></button>
@@ -3455,32 +3455,32 @@
 
           <template id="battlePhases_siege_defenders">
             <button
-              data-tip="Sheltering phase. Hide behind the walls and wait"
+              data-tip="隐蔽阶段。躲在墙后等待"
               data-phase="sheltering"
               class="icon-button-sheltering"
             ></button>
             <button
-              data-tip="Sortie phase. Make a sortie from besieged town. Melee units excel"
+              data-tip="突围阶段。从被包围的城市中突围，近战兵力优势"
               data-phase="sortie"
               class="icon-button-sortie"
             ></button>
             <button
-              data-tip="Bombardment phase. Attack enemy with machinery units"
+              data-tip="轰炸阶段。用机械装置攻击敌人"
               data-phase="bombardment"
               class="icon-button-bombardment"
             ></button>
             <button
-              data-tip="Defense phase. Ranged and melee units excel"
+              data-tip="防御阶段。远程和近战兵力优势"
               data-phase="defense"
               class="icon-button-defense"
             ></button>
             <button
-              data-tip="Surrendering phase. Give up the defense. Units strength reduced"
+              data-tip="投降阶段。放弃防御，士兵强度降低"
               data-phase="surrendering"
               class="icon-button-surrendering"
             ></button>
             <button
-              data-tip="Pursue phase. Mounted units excel"
+              data-tip="追击阶段。骑兵战力优势"
               data-phase="pursue"
               class="icon-button-pursue"
             ></button>
@@ -3488,7 +3488,7 @@
 
           <template id="battlePhases_ambush_attackers">
             <button
-              data-tip="Shock phase. Units strength reduced"
+              data-tip="地震阶段。士兵降低"
               data-phase="shock"
               class="icon-button-shock"
             ></button>
@@ -4183,7 +4183,7 @@
             spellcheck="false"
             style="width: 11em"
           />
-          <span data-tip="Speak the name. You can change voice and language in options" class="speaker">🔊</span>
+          <span data-tip="发音。您可以在选项中更改语音和语言" class="speaker">🔊</span>
           <span
             id="stateNameEditorShortCulture"
             data-tip="Generate culture-specific name"
@@ -4293,7 +4293,7 @@
             spellcheck="false"
             style="width: 11em"
           />
-          <span data-tip="Speak the name. You can change voice and language in options" class="speaker">🔊</span>
+          <span data-tip="发音。您可以在选项中更改语音和语言" class="speaker">🔊</span>
           <span
             id="stateNameEditorFullRegenerate"
             data-tip="Click to re-generate full name"
@@ -4468,7 +4468,7 @@
             spellcheck="false"
             style="width: 11em"
           />
-          <span data-tip="Speak the name. You can change voice and language in options" class="speaker">🔊</span>
+          <span data-tip="发音。您可以在选项中更改语音和语言" class="speaker">🔊</span>
           <span
             id="provinceNameEditorShortCulture"
             data-tip="Generate culture-specific name"
@@ -4540,7 +4540,7 @@
             spellcheck="false"
             style="width: 11em"
           />
-          <span data-tip="Speak the name. You can change voice and language in options" class="speaker">🔊</span>
+          <span data-tip="发音。您可以在选项中更改语音和语言" class="speaker">🔊</span>
           <span
             id="provinceNameEditorFullRegenerate"
             data-tip="Click to re-generate full name"
@@ -4715,7 +4715,7 @@
           <select id="notesSelect" data-tip="选择元素 id" style="width: 12em"></select>
           <strong>Element name: </strong>
           <input id="notesName" data-tip="Set element name" autocorrect="off" spellcheck="false" style="width: 16em" />
-          <span data-tip="Speak the name. You can change voice and language in options" class="speaker">🔊</span>
+          <span data-tip="发音。您可以在选项中更改语音和语言" class="speaker">🔊</span>
         </div>
         <div id="notesLegend" contenteditable="true"></div>
         <div style="margin-top: 0.3em">
