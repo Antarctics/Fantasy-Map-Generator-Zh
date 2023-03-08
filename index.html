@@ -2415,7 +2415,7 @@
           <input
             id="labelGroupInput"
             placeholder="new group name"
-            data-tip="设置新组名"
+            data-tip="新组名"
             style="display: none; width: 10em"
           />
           <span id="labelGroupNew" data-tip="为此标签创建新组" class="icon-plus pointer"></span>
@@ -2463,7 +2463,7 @@
           />
         </div>
 
-        <button id="labelAlign" data-tip="将文本路径转换为直线" class="icon-resize-horizontal"></button>
+        <button id="labelAlign" data-tip="将文本路线转换为直线" class="icon-resize-horizontal"></button>
         <button id="labelLegend" data-tip="编辑此标签的注释（图例）" class="icon-edit"></button>
         <button
           id="labelRemoveSingle"
@@ -2503,7 +2503,7 @@
           </div>
 
           <div data-tip="河流流量">
-            <div class="label">Discharge:</div>
+            <div class="label">流量:</div>
             <input id="riverDischarge" disabled />
           </div>
 
@@ -2537,7 +2537,7 @@
           <button id="riverEditStyle" data-tip="在样式编辑器中编辑所有河流的样式" class="icon-brush"></button>
           <button
             id="riverElevationProfile"
-            data-tip="显示河流的高度刨面图"
+            data-tip="显示河流的海拔剖面图"
             class="icon-chart-area"
           ></button>
           <button id="riverLegend" data-tip="编辑河流的注释（图例）" class="icon-edit"></button>
@@ -2553,204 +2553,204 @@
       <div id="riverCreator" class="dialog" style="display: none">
         <div id="riverCreatorBody" class="table"></div>
         <div id="riverCreatorBottom">
-          <button id="riverCreatorComplete" data-tip="Complete river creation" class="icon-check"></button>
-          <button id="riverCreatorCancel" data-tip="Cancel the creation" class="icon-cancel"></button>
+          <button id="riverCreatorComplete" data-tip="完成河流创建" class="icon-check"></button>
+          <button id="riverCreatorCancel" data-tip="取消创建" class="icon-cancel"></button>
         </div>
       </div>
 
       <div id="lakeEditor" class="dialog" style="display: none">
         <div id="lakeBody" style="padding-bottom: 0.3em">
           <div>
-            <div class="label" style="width: 4.8em">Name:</div>
+            <div class="label" style="width: 4.8em">名称:</div>
             <span
               id="lakeNameCulture"
-              data-tip="Generate culture-specific name for the lake"
+              data-tip="为湖泊生成特定文化的名称"
               class="icon-book pointer"
             ></span>
-            <span id="lakeNameRandom" data-tip="Generate random name for the lake" class="icon-globe pointer"></span>
-            <input id="lakeName" data-tip="Type to rename the lake" autocorrect="off" spellcheck="false" />
-            <span data-tip="Speak the name. You can change voice and language in options" class="speaker">🔊</span>
+            <span id="lakeNameRandom" data-tip="为湖泊生成随机名称" class="icon-globe pointer"></span>
+            <input id="lakeName" data-tip="输入以重命名湖泊" autocorrect="off" spellcheck="false" />
+            <span data-tip="发音。您可以在选项中更改语音和语言" class="speaker">🔊</span>
           </div>
 
-          <div data-tip="Type to change lake type (group)">
+          <div data-tip="更改湖泊类型（组）">
             <div class="label" style="width: 4.8em">Type:</div>
-            <span id="lakeGroupRemove" data-tip="Remove the group" class="icon-trash-empty pointer"></span>
-            <span id="lakeGroupAdd" data-tip="Create new type (group) for the lake" class="icon-plus pointer"></span>
-            <select id="lakeGroup" data-tip="Select lake type (group)"></select>
+            <span id="lakeGroupRemove" data-tip="删除组" class="icon-trash-empty pointer"></span>
+            <span id="lakeGroupAdd" data-tip="创建新的类型组" class="icon-plus pointer"></span>
+            <select id="lakeGroup" data-tip="选择类型组"></select>
             <input
               id="lakeGroupName"
               placeholder="type name"
-              data-tip="Provide a name for the new group"
+              data-tip="新组名"
               style="display: none"
             />
-            <span id="lakeEditStyle" data-tip="Edit lake group style in Style Editor" class="icon-brush pointer"></span>
+            <span id="lakeEditStyle" data-tip="在样式编辑器中编辑湖泊样式" class="icon-brush pointer"></span>
           </div>
 
-          <div data-tip="Lake area in selected units">
-            <div class="label">Area:</div>
+          <div data-tip="湖泊面积">
+            <div class="label">面积:</div>
             <input id="lakeArea" disabled />
           </div>
 
-          <div data-tip="Lake shore length in selected units">
-            <div class="label">Shore length:</div>
+          <div data-tip="湖岸长度">
+            <div class="label">湖岸长度:</div>
             <input id="lakeShoreLength" disabled />
           </div>
 
-          <div data-tip="Lake elevation in selected units">
-            <div class="label">Elevation:</div>
+          <div data-tip="湖泊海拔">
+            <div class="label">海拔:</div>
             <input id="lakeElevation" disabled />
           </div>
 
-          <div data-tip="Lake average depth in selected units">
-            <div class="label">Average depth:</div>
+          <div data-tip="湖泊平均深度">
+            <div class="label">平均深度:</div>
             <input id="lakeAverageDepth" disabled />
           </div>
 
-          <div data-tip="Lake maximum depth in selected units">
-            <div class="label">Max depth:</div>
+          <div data-tip="湖泊最大深度">
+            <div class="label">最大深度:</div>
             <input id="lakeMaxDepth" disabled />
           </div>
 
           <div
-            data-tip="Lake water supply. If supply > evaporation and there is an outlet, the lake water is fresh. If supply is very low, the lake becomes dry"
+            data-tip="湖水供给。如果供给>蒸发且有出口，则湖水是新鲜的。如果供给量很低，湖水会干涸"
           >
-            <div class="label">Supply:</div>
+            <div class="label">供给量:</div>
             <input id="lakeFlux" disabled />
           </div>
 
           <div
-            data-tip="Evaporation from lake surface. If evaporation > supply, the lake water is saline. If difference is high, the lake becomes dry"
+            data-tip="湖水蒸发。如果蒸发>供给，则湖水为盐水。如果蒸发值很大，湖水会干涸"
           >
-            <div class="label">Evaporation:</div>
+            <div class="label">蒸发量:</div>
             <input id="lakeEvaporation" disabled />
           </div>
 
-          <div data-tip="Number of lake inlet rivers">
-            <div class="label">Inlets:</div>
+          <div data-tip="入湖河流数量">
+            <div class="label">入水口:</div>
             <input id="lakeInlets" disabled />
           </div>
 
-          <div data-tip="Lake outlet river">
-            <div class="label">Outlet:</div>
+          <div data-tip="流出河流数量">
+            <div class="label">出水口:</div>
             <input id="lakeOutlet" disabled />
           </div>
         </div>
 
         <div id="lakeBottom">
-          <button id="lakeLegend" data-tip="Edit free text notes (legend) for the lake" class="icon-edit"></button>
+          <button id="lakeLegend" data-tip="编辑湖泊的注释（图例）" class="icon-edit"></button>
         </div>
       </div>
 
       <div id="elevationProfile" class="dialog" style="display: none" width="100%">
-        <div id="elevationGraph" data-tip="Elevation profile"></div>
+        <div id="elevationGraph" data-tip="海拔剖面图"></div>
         <div style="text-align: center">
           <div id="epControls">
-            <span data-tip="Set height scale"
-              >Height scale: <input id="epScaleRange" type="range" min="1" max="100" value="50"
+            <span data-tip="设置高度比例"
+              >高度比例: <input id="epScaleRange" type="range" min="1" max="100" value="50"
             /></span>
-            <span data-tip="Set curve profile"
-              >Curve:
+            <span data-tip="设置曲线轮廓"
+              >曲线:
               <select id="epCurve">
-                <option>Linear</option>
-                <option selected>Basis spline</option>
+                <option>直线</option>
+                <option selected>基本曲线</option>
                 <option>Bundle</option>
                 <option>Cubic Catmull-Rom</option>
                 <option>Monotone X</option>
-                <option>Natural</option>
+                <option>自然的</option>
               </select>
             </span>
             <span
-              ><button id="epSave" data-tip="Download the chart data as a CSV file" class="icon-download"></button
+              ><button id="epSave" data-tip="将图表数据下载为CSV文件" class="icon-download"></button
             ></span>
           </div>
         </div>
       </div>
 
       <div id="routeEditor" class="dialog" style="display: none">
-        <button id="routeGroupsShow" data-tip="Show the group selection" class="icon-tags"></button>
+        <button id="routeGroupsShow" data-tip="显示路线组" class="icon-tags"></button>
         <div id="routeGroupsSelection" style="display: none">
-          <button id="routeGroupsHide" data-tip="Hide the group section" class="icon-tags"></button>
-          <select id="routeGroup" data-tip="Select a group for this route" style="width: 12em"></select>
+          <button id="routeGroupsHide" data-tip="隐藏路线组" class="icon-tags"></button>
+          <select id="routeGroup" data-tip="选择路线组" style="width: 12em"></select>
           <input
             id="routeGroupName"
             placeholder="new group name"
-            data-tip="Provide a name for the new group"
+            data-tip="新组名"
             style="display: none; width: 12em"
           />
-          <span id="routeGroupAdd" data-tip="Create new group for this route" class="icon-plus pointer"></span>
+          <span id="routeGroupAdd" data-tip="创建新的类型组" class="icon-plus pointer"></span>
           <span
             id="routeGroupRemove"
-            data-tip="Remove all routes of this group"
+            data-tip="删除组"
             class="icon-trash-empty pointer"
           ></span>
         </div>
 
-        <button id="routeEditStyle" data-tip="Edit route group style in Style Editor" class="icon-brush"></button>
-        <button id="routeLength" data-tip="Route length in selected units">0</button>
+        <button id="routeEditStyle" data-tip="在样式编辑器中编辑路线样式" class="icon-brush"></button>
+        <button id="routeLength" data-tip="路线长度">0</button>
         <button
           id="routeElevationProfile"
-          data-tip="Show the elevation profile for the route"
+          data-tip="海拔剖面图"
           class="icon-chart-area"
         ></button>
-        <button id="routeSplit" data-tip="Click on a control point to split the route" class="icon-unlink"></button>
-        <button id="routeLegend" data-tip="Edit free text notes (legend) for the route" class="icon-edit"></button>
-        <button id="routeNew" data-tip="Create new route clicking on map" class="icon-map-pin"></button>
-        <button id="routeRemove" data-tip="Remove route" data-shortcut="Delete" class="icon-trash fastDelete"></button>
+        <button id="routeSplit" data-tip="单击控制点以拆分路线" class="icon-unlink"></button>
+        <button id="routeLegend" data-tip="编辑路线的注释（图例）" class="icon-edit"></button>
+        <button id="routeNew" data-tip="点击地图创建新路线" class="icon-map-pin"></button>
+        <button id="routeRemove" data-tip="删除路线" data-shortcut="Delete" class="icon-trash fastDelete"></button>
       </div>
 
       <div id="iceEditor" class="dialog" style="display: none">
-        <button id="iceEditStyle" data-tip="Edit style in Style Editor" class="icon-brush"></button>
-        <button id="iceRandomize" data-tip="Randomize Iceberg shape" class="icon-shuffle"></button>
-        <input id="iceSize" data-tip="Change Iceberg size" type="range" min=".05" max="2" step=".01" />
-        <button id="iceNew" data-tip="Add an Iceberg (click on map)" class="icon-plus"></button>
+        <button id="iceEditStyle" data-tip="在样式编辑器中编辑样式" class="icon-brush"></button>
+        <button id="iceRandomize" data-tip="随机形状" class="icon-shuffle"></button>
+        <input id="iceSize" data-tip="更改大小" type="range" min=".05" max="2" step=".01" />
+        <button id="iceNew" data-tip="添加冰山（点击地图）" class="icon-plus"></button>
         <button
           id="iceRemove"
-          data-tip="Remove the element"
+          data-tip="删除元素"
           data-shortcut="Delete"
           class="icon-trash fastDelete"
         ></button>
       </div>
 
       <div id="coastlineEditor" class="dialog" style="display: none">
-        <button id="coastlineGroupsShow" data-tip="Show the group selection" class="icon-tags"></button>
+        <button id="coastlineGroupsShow" data-tip="显示组" class="icon-tags"></button>
         <div id="coastlineGroupsSelection" style="display: none">
-          <button id="coastlineGroupsHide" data-tip="Hide the group section" class="icon-tags"></button>
-          <select id="coastlineGroup" data-tip="Select a group for this coastline" style="width: 9em"></select>
+          <button id="coastlineGroupsHide" data-tip="隐藏组" class="icon-tags"></button>
+          <select id="coastlineGroup" data-tip="选择类型组" style="width: 9em"></select>
           <input
             id="coastlineGroupName"
             placeholder="new group name"
-            data-tip="Provide a name for the new group"
+            data-tip="新租名"
             style="display: none; width: 9em"
           />
-          <span id="coastlineGroupAdd" data-tip="Create new group for this coastline" class="icon-plus pointer"></span>
-          <span id="coastlineGroupRemove" data-tip="Remove the group" class="icon-trash-empty pointer"></span>
+          <span id="coastlineGroupAdd" data-tip="新建组" class="icon-plus pointer"></span>
+          <span id="coastlineGroupRemove" data-tip="删除组" class="icon-trash-empty pointer"></span>
         </div>
 
         <button
           id="coastlineEditStyle"
-          data-tip="Edit coastline group style in Style Editor"
+          data-tip="在样式编辑器中编辑样式"
           class="icon-brush"
         ></button>
-        <button id="coastlineArea" data-tip="Landmass area in selected units">0</button>
+        <button id="coastlineArea" data-tip="大陆面积">0</button>
       </div>
 
       <div id="reliefEditor" class="dialog" style="display: none">
-        <div id="reliefTools" data-tip="Select mode of operation">
-          <div class="reliefEditorLabel">Mode:</div>
-          <button id="reliefIndividual" data-tip="Edit individual selected icon" class="icon-info pressed"></button>
-          <button id="reliefBulkAdd" data-tip="Place icons in a bulk" class="icon-brush"></button>
-          <button id="reliefBulkRemove" data-tip="Remove icons in a bulk" class="icon-eraser"></button>
+        <div id="reliefTools" data-tip="选择操作模式">
+          <div class="reliefEditorLabel">模式:</div>
+          <button id="reliefIndividual" data-tip="编辑单个图标" class="icon-info pressed"></button>
+          <button id="reliefBulkAdd" data-tip="批量放置图标" class="icon-brush"></button>
+          <button id="reliefBulkRemove" data-tip="批量删除图标" class="icon-eraser"></button>
 
-          <div style="margin-left: 4.6em">Set:</div>
+          <div style="margin-left: 4.6em">设置:</div>
           <select id="reliefEditorSet">
-            <option value="simple">Simple</option>
-            <option value="colored">Colored</option>
-            <option value="gray">Gray</option>
+            <option value="simple">简易</option>
+            <option value="colored">彩色</option>
+            <option value="gray">灰色</option>
           </select>
         </div>
 
-        <div id="reliefSizeDiv" data-tip="Set icon size for individual icon or for bulk placement">
-          <div class="reliefEditorLabel">Size:</div>
+        <div id="reliefSizeDiv" data-tip="为单个图标或批量放置设置图标大小">
+          <div class="reliefEditorLabel">大小:</div>
           <input
             id="reliefSize"
             oninput="reliefSizeNumber.value = this.value"
@@ -2762,8 +2762,8 @@
           <input id="reliefSizeNumber" oninput="reliefSize.value = this.value" type="number" min="2" value="5" />
         </div>
 
-        <div id="reliefRadiusDiv" data-tip="Set brush radius for icons placement on deletion" style="display: none">
-          <div class="reliefEditorLabel">Radius:</div>
+        <div id="reliefRadiusDiv" data-tip="设置删除笔刷半径" style="display: none">
+          <div class="reliefEditorLabel">半径:</div>
           <input
             id="reliefRadius"
             oninput="reliefRadiusNumber.value = this.value"
@@ -2775,8 +2775,8 @@
           <input id="reliefRadiusNumber" oninput="reliefRadius.value = this.value" type="number" min="1" value="15" />
         </div>
 
-        <div id="reliefSpacingDiv" data-tip="Set spacing between relief icons" style="display: none">
-          <div class="reliefEditorLabel">Spacing:</div>
+        <div id="reliefSpacingDiv" data-tip="设置地形图之间的间距" style="display: none">
+          <div class="reliefEditorLabel">间距:</div>
           <input
             id="reliefSpacing"
             oninput="reliefSpacingNumber.value = this.value"
@@ -2790,256 +2790,256 @@
 
         <div id="reliefIconsDiv" data-tip="Select icon">
           <div data-type="simple" style="display: none">
-            <svg data-type="#relief-mount-1" data-tip="Select Mountain icon">
+            <svg data-type="#relief-mount-1" data-tip="选择山地图标">
               <use href="#relief-mount-1" width="40" height="40"></use>
             </svg>
-            <svg data-type="#relief-hill-1" data-tip="Select Hill icon">
+            <svg data-type="#relief-hill-1" data-tip="选择丘陵图标">
               <use href="#relief-hill-1" width="40" height="40"></use>
             </svg>
-            <svg data-type="#relief-deciduous-1" data-tip="Select Deciduous Tree icon">
+            <svg data-type="#relief-deciduous-1" data-tip="选择落叶林图标">
               <use href="#relief-deciduous-1" x="-25%" y="-25%" width="60" height="60"></use>
             </svg>
-            <svg data-type="#relief-conifer-1" data-tip="Select Conifer Tree icon">
+            <svg data-type="#relief-conifer-1" data-tip="选择针叶林图标">
               <use href="#relief-conifer-1" x="-25%" y="-25%" width="60" height="60"></use>
             </svg>
-            <svg data-type="#relief-palm-1" data-tip="Select Palm icon">
+            <svg data-type="#relief-palm-1" data-tip="选择棕树图标">
               <use href="#relief-palm-1" x="-25%" y="-25%" width="60" height="60"></use>
             </svg>
-            <svg data-type="#relief-acacia-1" data-tip="Select Acacia icon">
+            <svg data-type="#relief-acacia-1" data-tip="选择金合欢树图标">
               <use href="#relief-acacia-1" x="-25%" y="-25%" width="60" height="60"></use>
             </svg>
-            <svg data-type="#relief-swamp-1" data-tip="Select Swamp icon">
+            <svg data-type="#relief-swamp-1" data-tip="选择沼泽图标">
               <use href="#relief-swamp-1" x="-50%" y="-50%" width="80" height="80"></use>
             </svg>
-            <svg data-type="#relief-grass-1" data-tip="Select Grass icon">
+            <svg data-type="#relief-grass-1" data-tip="选择草地图标">
               <use href="#relief-grass-1" x="-100%" y="-100%" width="120" height="120"></use>
             </svg>
-            <svg data-type="#relief-dune-1" data-tip="Select Dune icon">
+            <svg data-type="#relief-dune-1" data-tip="选择沙丘图标">
               <use href="#relief-dune-1" x="-25%" y="-25%" width="60" height="60"></use>
             </svg>
           </div>
 
           <div data-type="colored" style="display: none">
-            <svg data-type="#relief-mount-2" data-tip="Select Mountain icon">
+            <svg data-type="#relief-mount-2" data-tip="选择山地图标">
               <use href="#relief-mount-2" width="40" height="40"></use>
             </svg>
-            <svg data-type="#relief-mount-3" data-tip="Select Mountain icon">
+            <svg data-type="#relief-mount-3" data-tip="选择山地图标">
               <use href="#relief-mount-3" width="40" height="40"></use>
             </svg>
-            <svg data-type="#relief-mount-4" data-tip="Select Mountain icon">
+            <svg data-type="#relief-mount-4" data-tip="选择山地图标">
               <use href="#relief-mount-4" width="40" height="40"></use>
             </svg>
-            <svg data-type="#relief-mount-5" data-tip="Select Mountain icon">
+            <svg data-type="#relief-mount-5" data-tip="选择山地图标">
               <use href="#relief-mount-5" width="40" height="40"></use>
             </svg>
-            <svg data-type="#relief-mount-6" data-tip="Select Mountain icon">
+            <svg data-type="#relief-mount-6" data-tip="选择山地图标">
               <use href="#relief-mount-6" width="40" height="40"></use>
             </svg>
-            <svg data-type="#relief-mount-7" data-tip="Select Mountain icon">
+            <svg data-type="#relief-mount-7" data-tip="选择山地图标">
               <use href="#relief-mount-7" width="40" height="40"></use>
             </svg>
-            <svg data-type="#relief-mountSnow-1" data-tip="Select Snow Mountain icon">
+            <svg data-type="#relief-mountSnow-1" data-tip="选择雪山图标">
               <use href="#relief-mountSnow-1" width="40" height="40"></use>
             </svg>
-            <svg data-type="#relief-mountSnow-2" data-tip="Select Snow Mountain icon">
+            <svg data-type="#relief-mountSnow-2" data-tip="选择雪山图标">
               <use href="#relief-mountSnow-2" width="40" height="40"></use>
             </svg>
-            <svg data-type="#relief-mountSnow-3" data-tip="Select Snow Mountain icon">
+            <svg data-type="#relief-mountSnow-3" data-tip="选择雪山图标">
               <use href="#relief-mountSnow-3" width="40" height="40"></use>
             </svg>
-            <svg data-type="#relief-mountSnow-4" data-tip="Select Snow Mountain icon">
+            <svg data-type="#relief-mountSnow-4" data-tip="选择雪山图标">
               <use href="#relief-mountSnow-4" width="40" height="40"></use>
             </svg>
-            <svg data-type="#relief-mountSnow-5" data-tip="Select Snow Mountain icon">
+            <svg data-type="#relief-mountSnow-5" data-tip="选择雪山图标">
               <use href="#relief-mountSnow-5" width="40" height="40"></use>
             </svg>
-            <svg data-type="#relief-mountSnow-6" data-tip="Select Snow Mountain icon">
+            <svg data-type="#relief-mountSnow-6" data-tip="选择雪山图标">
               <use href="#relief-mountSnow-6" width="40" height="40"></use>
             </svg>
-            <svg data-type="#relief-vulcan-1" data-tip="Select Volcano icon">
+            <svg data-type="#relief-vulcan-1" data-tip="选择火山图标">
               <use href="#relief-vulcan-1" width="40" height="40"></use>
             </svg>
-            <svg data-type="#relief-vulcan-2" data-tip="Select Volcano icon">
+            <svg data-type="#relief-vulcan-2" data-tip="选择火山图标">
               <use href="#relief-vulcan-2" width="40" height="40"></use>
             </svg>
-            <svg data-type="#relief-vulcan-3" data-tip="Select Volcano icon">
+            <svg data-type="#relief-vulcan-3" data-tip="选择火山图标">
               <use href="#relief-vulcan-3" width="40" height="40"></use>
             </svg>
-            <svg data-type="#relief-hill-2" data-tip="Select Hill icon">
+            <svg data-type="#relief-hill-2" data-tip="选择丘陵图标">
               <use href="#relief-hill-2" width="40" height="40"></use>
             </svg>
-            <svg data-type="#relief-hill-3" data-tip="Select Hill icon">
+            <svg data-type="#relief-hill-3" data-tip="选择丘陵图标">
               <use href="#relief-hill-3" width="40" height="40"></use>
             </svg>
-            <svg data-type="#relief-hill-4" data-tip="Select Hill icon">
+            <svg data-type="#relief-hill-4" data-tip="选择丘陵图标">
               <use href="#relief-hill-4" width="40" height="40"></use>
             </svg>
-            <svg data-type="#relief-hill-5" data-tip="Select Hill icon">
+            <svg data-type="#relief-hill-5" data-tip="选择丘陵图标">
               <use href="#relief-hill-5" width="40" height="40"></use>
             </svg>
-            <svg data-type="#relief-dune-2" data-tip="Select Dune icon">
+            <svg data-type="#relief-dune-2" data-tip="选择沙丘图标">
               <use href="#relief-dune-2" width="40" height="40"></use>
             </svg>
-            <svg data-type="#relief-deciduous-2" data-tip="Select Deciduous Tree icon">
+            <svg data-type="#relief-deciduous-2" data-tip="选择落叶树图标">
               <use href="#relief-deciduous-2" x="-25%" y="-25%" width="60" height="60"></use>
             </svg>
-            <svg data-type="#relief-deciduous-3" data-tip="Select Deciduous Tree icon">
+            <svg data-type="#relief-deciduous-3" data-tip="选择落叶树图标">
               <use href="#relief-deciduous-3" x="-25%" y="-25%" width="60" height="60"></use>
             </svg>
-            <svg data-type="#relief-conifer-2" data-tip="Select Conifer Tree icon">
+            <svg data-type="#relief-conifer-2" data-tip="选择针叶林图标">
               <use href="#relief-conifer-2" x="-25%" y="-25%" width="60" height="60"></use>
             </svg>
-            <svg data-type="#relief-coniferSnow-1" data-tip="Select Snow Conifer Tree icon">
+            <svg data-type="#relief-coniferSnow-1" data-tip="选择带雪针叶树图标">
               <use href="#relief-coniferSnow-1" x="-25%" y="-25%" width="60" height="60"></use>
             </svg>
-            <svg data-type="#relief-acacia-2" data-tip="Select Acacia icon">
+            <svg data-type="#relief-acacia-2" data-tip="选择金合欢树图标">
               <use href="#relief-acacia-2" x="-25%" y="-25%" width="60" height="60"></use>
             </svg>
-            <svg data-type="#relief-palm-2" data-tip="Select Palm icon">
+            <svg data-type="#relief-palm-2" data-tip="选择棕树图标">
               <use href="#relief-palm-2" x="-25%" y="-25%" width="60" height="60"></use>
             </svg>
-            <svg data-type="#relief-grass-2" data-tip="Select Grass icon">
+            <svg data-type="#relief-grass-2" data-tip="选择草地图标">
               <use href="#relief-grass-2" x="-25%" y="-25%" width="60" height="60"></use>
             </svg>
-            <svg data-type="#relief-swamp-2" data-tip="Select Swamp icon">
+            <svg data-type="#relief-swamp-2" data-tip="选择沼泽图标">
               <use href="#relief-swamp-2" x="-25%" y="-25%" width="60" height="60"></use>
             </svg>
-            <svg data-type="#relief-swamp-3" data-tip="Select Swamp icon">
+            <svg data-type="#relief-swamp-3" data-tip="选择沼泽图标">
               <use href="#relief-swamp-3" x="-25%" y="-25%" width="60" height="60"></use>
             </svg>
-            <svg data-type="#relief-cactus-1" data-tip="Select Cactus icon">
+            <svg data-type="#relief-cactus-1" data-tip="选择仙人掌图标">
               <use href="#relief-cactus-1" x="-25%" y="-25%" width="60" height="60"></use>
             </svg>
-            <svg data-type="#relief-cactus-2" data-tip="Select Cactus icon">
+            <svg data-type="#relief-cactus-2" data-tip="选择仙人掌图标">
               <use href="#relief-cactus-2" x="-25%" y="-25%" width="60" height="60"></use>
             </svg>
-            <svg data-type="#relief-cactus-3" data-tip="Select Cactus icon">
+            <svg data-type="#relief-cactus-3" data-tip="选择仙人掌图标">
               <use href="#relief-cactus-3" x="-25%" y="-25%" width="60" height="60"></use>
             </svg>
-            <svg data-type="#relief-deadTree-1" data-tip="Select Dead Tree icon">
+            <svg data-type="#relief-deadTree-1" data-tip="选择枯树图标">
               <use href="#relief-deadTree-1" x="-25%" y="-25%" width="60" height="60"></use>
             </svg>
-            <svg data-type="#relief-deadTree-2" data-tip="Select Dead Tree icon">
+            <svg data-type="#relief-deadTree-2" data-tip="选择枯树图标">
               <use href="#relief-deadTree-2" x="-25%" y="-25%" width="60" height="60"></use>
             </svg>
           </div>
 
           <div data-type="gray" style="display: none">
-            <svg data-type="#relief-mount-2-bw" data-tip="Select Mountain icon">
+            <svg data-type="#relief-mount-2-bw" data-tip="选择山地图标">
               <use href="#relief-mount-2-bw" width="40" height="40"></use>
             </svg>
-            <svg data-type="#relief-mount-3-bw" data-tip="Select Mountain icon">
+            <svg data-type="#relief-mount-3-bw" data-tip="选择山地图标">
               <use href="#relief-mount-3-bw" width="40" height="40"></use>
             </svg>
-            <svg data-type="#relief-mount-4-bw" data-tip="Select Mountain icon">
+            <svg data-type="#relief-mount-4-bw" data-tip="选择山地图标">
               <use href="#relief-mount-4-bw" width="40" height="40"></use>
             </svg>
-            <svg data-type="#relief-mount-5-bw" data-tip="Select Mountain icon">
+            <svg data-type="#relief-mount-5-bw" data-tip="选择山地图标">
               <use href="#relief-mount-5-bw" width="40" height="40"></use>
             </svg>
-            <svg data-type="#relief-mount-6-bw" data-tip="Select Mountain icon">
+            <svg data-type="#relief-mount-6-bw" data-tip="选择山地图标">
               <use href="#relief-mount-6-bw" width="40" height="40"></use>
             </svg>
-            <svg data-type="#relief-mount-7-bw" data-tip="Select Mountain icon">
+            <svg data-type="#relief-mount-7-bw" data-tip="选择山地图标">
               <use href="#relief-mount-7-bw" width="40" height="40"></use>
             </svg>
-            <svg data-type="#relief-mountSnow-1-bw" data-tip="Select Snow Mountain icon">
+            <svg data-type="#relief-mountSnow-1-bw" data-tip="选择雪山图标">
               <use href="#relief-mountSnow-1-bw" width="40" height="40"></use>
             </svg>
-            <svg data-type="#relief-mountSnow-2-bw" data-tip="Select Snow Mountain icon">
+            <svg data-type="#relief-mountSnow-2-bw" data-tip="选择雪山图标">
               <use href="#relief-mountSnow-2-bw" width="40" height="40"></use>
             </svg>
-            <svg data-type="#relief-mountSnow-3-bw" data-tip="Select Snow Mountain icon">
+            <svg data-type="#relief-mountSnow-3-bw" data-tip="选择雪山图标">
               <use href="#relief-mountSnow-3-bw" width="40" height="40"></use>
             </svg>
-            <svg data-type="#relief-mountSnow-4-bw" data-tip="Select Snow Mountain icon">
+            <svg data-type="#relief-mountSnow-4-bw" data-tip="选择雪山图标">
               <use href="#relief-mountSnow-4-bw" width="40" height="40"></use>
             </svg>
-            <svg data-type="#relief-mountSnow-5-bw" data-tip="Select Snow Mountain icon">
+            <svg data-type="#relief-mountSnow-5-bw" data-tip="选择雪山图标">
               <use href="#relief-mountSnow-5-bw" width="40" height="40"></use>
             </svg>
-            <svg data-type="#relief-mountSnow-6-bw" data-tip="Select Snow Mountain icon">
+            <svg data-type="#relief-mountSnow-6-bw" data-tip="选择雪山图标">
               <use href="#relief-mountSnow-6-bw" width="40" height="40"></use>
             </svg>
-            <svg data-type="#relief-vulcan-1-bw" data-tip="Select Volcano icon">
+            <svg data-type="#relief-vulcan-1-bw" data-tip="选择火山图标">
               <use href="#relief-vulcan-1-bw" width="40" height="40"></use>
             </svg>
-            <svg data-type="#relief-vulcan-2-bw" data-tip="Select Volcano icon">
+            <svg data-type="#relief-vulcan-2-bw" data-tip="选择火山图标">
               <use href="#relief-vulcan-2-bw" width="40" height="40"></use>
             </svg>
-            <svg data-type="#relief-vulcan-3-bw" data-tip="Select Volcano icon">
+            <svg data-type="#relief-vulcan-3-bw" data-tip="选择火山图标">
               <use href="#relief-vulcan-3-bw" width="40" height="40"></use>
             </svg>
-            <svg data-type="#relief-hill-2-bw" data-tip="Select Hill icon">
+            <svg data-type="#relief-hill-2-bw" data-tip="选择丘陵图标">
               <use href="#relief-hill-2-bw" width="40" height="40"></use>
             </svg>
-            <svg data-type="#relief-hill-3-bw" data-tip="Select Hill icon">
+            <svg data-type="#relief-hill-3-bw" data-tip="选择丘陵图标">
               <use href="#relief-hill-3-bw" width="40" height="40"></use>
             </svg>
-            <svg data-type="#relief-hill-4-bw" data-tip="Select Hill icon">
+            <svg data-type="#relief-hill-4-bw" data-tip="选择丘陵图标">
               <use href="#relief-hill-4-bw" width="40" height="40"></use>
             </svg>
-            <svg data-type="#relief-hill-5-bw" data-tip="Select Hill icon">
+            <svg data-type="#relief-hill-5-bw" data-tip="选择丘陵图标">
               <use href="#relief-hill-5-bw" width="40" height="40"></use>
             </svg>
-            <svg data-type="#relief-dune-2-bw" data-tip="Select Dune icon">
+            <svg data-type="#relief-dune-2-bw" data-tip="选择沙丘图标">
               <use href="#relief-dune-2-bw" width="40" height="40"></use>
             </svg>
-            <svg data-type="#relief-deciduous-2-bw" data-tip="Select Deciduous Tree icon">
+            <svg data-type="#relief-deciduous-2-bw" data-tip="选择落叶树图标">
               <use href="#relief-deciduous-2-bw" x="-25%" y="-25%" width="60" height="60"></use>
             </svg>
-            <svg data-type="#relief-deciduous-3-bw" data-tip="Select Deciduous Tree icon">
+            <svg data-type="#relief-deciduous-3-bw" data-tip="选择落叶树图标">
               <use href="#relief-deciduous-3-bw" x="-25%" y="-25%" width="60" height="60"></use>
             </svg>
-            <svg data-type="#relief-conifer-2-bw" data-tip="Select Conifer Tree icon">
+            <svg data-type="#relief-conifer-2-bw" data-tip="选择针叶林图标">
               <use href="#relief-conifer-2-bw" x="-25%" y="-25%" width="60" height="60"></use>
             </svg>
-            <svg data-type="#relief-coniferSnow-1-bw" data-tip="Select Snow Conifer Tree icon">
+            <svg data-type="#relief-coniferSnow-1-bw" data-tip="选择带雪针叶林图标">
               <use href="#relief-coniferSnow-1-bw" x="-25%" y="-25%" width="60" height="60"></use>
             </svg>
-            <svg data-type="#relief-acacia-2-bw" data-tip="Select Acacia icon">
+            <svg data-type="#relief-acacia-2-bw" data-tip="选择金合欢树图标">
               <use href="#relief-acacia-2-bw" x="-25%" y="-25%" width="60" height="60"></use>
             </svg>
-            <svg data-type="#relief-palm-2-bw" data-tip="Select Palm icon">
+            <svg data-type="#relief-palm-2-bw" data-tip="选择棕树图标">
               <use href="#relief-palm-2-bw" x="-25%" y="-25%" width="60" height="60"></use>
             </svg>
-            <svg data-type="#relief-grass-2-bw" data-tip="Select Grass icon">
+            <svg data-type="#relief-grass-2-bw" data-tip="选择草地图标">
               <use href="#relief-grass-2-bw" x="-25%" y="-25%" width="60" height="60"></use>
             </svg>
-            <svg data-type="#relief-swamp-2-bw" data-tip="Select Swamp icon">
+            <svg data-type="#relief-swamp-2-bw" data-tip="选择沼泽图标">
               <use href="#relief-swamp-2-bw" x="-25%" y="-25%" width="60" height="60"></use>
             </svg>
-            <svg data-type="#relief-swamp-3-bw" data-tip="Select Swamp icon">
+            <svg data-type="#relief-swamp-3-bw" data-tip="选择沼泽图标">
               <use href="#relief-swamp-3-bw" x="-25%" y="-25%" width="60" height="60"></use>
             </svg>
-            <svg data-type="#relief-cactus-1-bw" data-tip="Select Cactus icon">
+            <svg data-type="#relief-cactus-1-bw" data-tip="选择仙人掌图标">
               <use href="#relief-cactus-1-bw" x="-25%" y="-25%" width="60" height="60"></use>
             </svg>
-            <svg data-type="#relief-cactus-2-bw" data-tip="Select Cactus icon">
+            <svg data-type="#relief-cactus-2-bw" data-tip=选择仙人掌图标">
               <use href="#relief-cactus-2-bw" x="-25%" y="-25%" width="60" height="60"></use>
             </svg>
-            <svg data-type="#relief-cactus-3-bw" data-tip="Select Cactus icon">
+            <svg data-type="#relief-cactus-3-bw" data-tip="选择仙人掌图标">
               <use href="#relief-cactus-3-bw" x="-25%" y="-25%" width="60" height="60"></use>
             </svg>
-            <svg data-type="#relief-deadTree-1-bw" data-tip="Select Dead Tree icon">
+            <svg data-type="#relief-deadTree-1-bw" data-tip="选择枯树图标">
               <use href="#relief-deadTree-1-bw" x="-25%" y="-25%" width="60" height="60"></use>
             </svg>
-            <svg data-type="#relief-deadTree-2-bw" data-tip="Select Dead Tree icon">
+            <svg data-type="#relief-deadTree-2-bw" data-tip="选择枯树图标">
               <use href="#relief-deadTree-2-bw" x="-25%" y="-25%" width="60" height="60"></use>
             </svg>
           </div>
 
-          <svg id="reliefIconsSeletionAny" data-tip="Select any type of icons"><text x="50%" y="50%">Any</text></svg>
+          <svg id="reliefIconsSeletionAny" data-tip="选择任意类型的图标"><text x="50%" y="50%">Any</text></svg>
         </div>
 
         <div id="reliefBottom">
-          <button id="reliefEditStyle" data-tip="Edit Relief Icons style in Style Editor" class="icon-adjust"></button>
-          <button id="reliefCopy" data-tip="Copy selected relief icon" class="icon-clone"></button>
-          <button id="reliefMoveFront" data-tip="Move selected relief icon to front" class="icon-level-up"></button>
-          <button id="reliefMoveBack" data-tip="Move selected relief icon back" class="icon-level-down"></button>
+          <button id="reliefEditStyle" data-tip="在样式编辑器中编辑图标样式" class="icon-adjust"></button>
+          <button id="reliefCopy" data-tip="复制选定的图标" class="icon-clone"></button>
+          <button id="reliefMoveFront" data-tip="向前移动选定的图标" class="icon-level-up"></button>
+          <button id="reliefMoveBack" data-tip="向后移动选定的图标" class="icon-level-down"></button>
           <button
             id="reliefRemove"
-            data-tip="Remove selected relief icon or icon type"
+            data-tip="删除选定的图标或类型"
             data-shortcut="Delete"
             class="icon-trash fastDelete"
           ></button>
@@ -3049,144 +3049,144 @@
       <div id="burgEditor" class="dialog" style="display: none">
         <div id="burgBody" style="padding-bottom: 0.3em">
           <div style="display: flex; align-items: center">
-            <svg data-tip="Burg emblem. Click to edit" class="pointer" viewBox="0 0 200 200" width="13em" height="13em">
+            <svg data-tip="城镇徽章。单击以编辑" class="pointer" viewBox="0 0 200 200" width="13em" height="13em">
               <use id="burgEmblem"></use>
             </svg>
             <div style="display: grid; grid-auto-rows: minmax(1.6em, auto)">
               <div id="burgProvinceAndState" style="font-style: italic; max-width: 16em"></div>
 
               <div>
-                <div class="label">Name:</div>
+                <div class="label">名称:</div>
                 <input
                   id="burgName"
-                  data-tip="Type to rename the burg"
+                  data-tip="输入以重命名城镇"
                   autocorrect="off"
                   spellcheck="false"
                   style="width: 8em"
                 />
-                <span data-tip="Speak the name. You can change voice and language in options" class="speaker">🔊</span>
+                <span data-tip="发音。您可以在选项中更改语音和语言" class="speaker">🔊</span>
                 <span
                   id="burgNameReRandom"
-                  data-tip="Generate random name for the burg"
+                  data-tip="为城镇生成随机名称"
                   class="icon-globe pointer"
                 ></span>
               </div>
 
-              <div data-tip="Select burg type. Type slightly affects emblem generation">
-                <div class="label">Type:</div>
+              <div data-tip="选择城镇类型。类型略微影响徽章的生成">
+                <div class="label">类型:</div>
                 <select id="burgType" style="width: 8em">
-                  <option value="Generic">Generic</option>
-                  <option value="River">River</option>
-                  <option value="Lake">Lake</option>
-                  <option value="Naval">Naval</option>
-                  <option value="Nomadic">Nomadic</option>
-                  <option value="Hunting">Hunting</option>
-                  <option value="Highland">Highland</option>
+                  <option value="Generic">平原</option>
+                  <option value="River">河流</option>
+                  <option value="Lake">湖泊</option>
+                  <option value="Naval">海军</option>
+                  <option value="Nomadic">游牧</option>
+                  <option value="Hunting">追猎</option>
+                  <option value="Highland">高原</option>
                 </select>
               </div>
 
-              <div data-tip="Select dominant culture">
-                <div class="label">Culture:</div>
+              <div data-tip="选择优势文化">
+                <div class="label">文化e:</div>
                 <select id="burgCulture" style="width: 8em"></select>
                 <span
                   id="burgNameReCulture"
-                  data-tip="Generate culture-specific name for the burg"
+                  data-tip="为城镇生成特定文化的名称"
                   class="icon-book pointer"
                 ></span>
               </div>
 
-              <div data-tip="Set burg population">
-                <div class="label">Population:</div>
+              <div data-tip="设置城镇人口">
+                <div class="label">人口:</div>
                 <input id="burgPopulation" type="number" min="0" step="1" style="width: 8em" />
               </div>
 
               <div>
-                <div class="label">Features:</div>
+                <div class="label">特色:</div>
                 <span
                   id="burgCapital"
-                  data-tip="Shows whether the burg is a state capital. Click to toggle"
+                  data-tip="该城镇是否为首府。单击以切换"
                   data-feature="capital"
                   class="burgFeature icon-star"
                 ></span>
                 <span
                   id="burgPort"
-                  data-tip="Shows whether the burg is a port. Click to toggle"
+                  data-tip="城镇是否为港口。单击可切换"
                   data-feature="port"
                   class="burgFeature icon-anchor"
                 ></span>
                 <span
                   id="burgCitadel"
-                  data-tip="Shows whether the burg has a citadel (castle). Click to toggle"
+                  data-tip="城镇是否有城堡。单击以切换"
                   data-feature="citadel"
                   class="burgFeature icon-chess-rook"
                   style="font-size: 1.1em"
                 ></span>
                 <span
                   id="burgWalls"
-                  data-tip="Shows whether the burg is walled. Click to toggle"
+                  data-tip="城镇是否有城墙。单击以切换"
                   data-feature="walls"
                   class="burgFeature icon-fort-awesome"
                 ></span>
                 <span
                   id="burgPlaza"
-                  data-tip="Shows whether the burg is a trade center (has big marketplace). Click to toggle"
+                  data-tip="城镇是否为贸易中心（有大市场）。单击以切换"
                   data-feature="plaza"
                   class="burgFeature icon-store"
                   style="font-size: 1em"
                 ></span>
                 <span
                   id="burgTemple"
-                  data-tip="Shows whether the burg is a religious center. Click to toggle"
+                  data-tip="城镇是否为宗教中心。单击以切换"
                   data-feature="temple"
                   class="burgFeature icon-chess-bishop"
                   style="font-size: 1.1em; margin-left: 3px"
                 ></span>
                 <span
                   id="burgShanty"
-                  data-tip="Shows whether the burg has a shanty town. Click to toggle"
+                  data-tip="城镇是否有贫民区。单击以切换"
                   data-feature="shanty"
                   class="burgFeature icon-campground"
                   style="font-size: 1em"
                 ></span>
               </div>
 
-              <div data-tip="Burg mean annual temperature and real-world city for comparison">
-                <div class="label">Temperature:</div>
-                <span id="burgTemperature"></span>, like in
+              <div data-tip="城镇年平均气温与真实城市进行比较">
+                <div class="label">气温:</div>
+                <span id="burgTemperature"></span>, 类似于
                 <span id="burgTemperatureLikeIn"></span>
                 <i
                   id="burgTemperatureGraph"
-                  data-tip="Show temperature graph for the burg"
+                  data-tip="城镇的温度图"
                   class="icon-chart-area pointer"
                 ></i>
               </div>
 
-              <div data-tip="Burg height above mean sea level">
-                <div class="label">Elevation:</div>
-                <span id="burgElevation"></span> above sea level
+              <div data-tip="城镇海拔">
+                <div class="label">海拔:</div>
+                <span id="burgElevation"></span>
               </div>
             </div>
           </div>
 
           <div
             id="mfcgPreviewSection"
-            data-tip="Burg preview in the Medieval Fantasy City Generator. Default seed is a combination of map seed and burg id"
+            data-tip="中世纪幻想城市生成器中的城镇预览。默认种子是地图种子和城镇ID的组合"
             style="display: flex; flex-direction: column"
           >
             <div>
-              See in <a id="mfcgLink" target="_blank">City Generator by Watabou</a>.
+              查看 <a id="mfcgLink" target="_blank">Watabou的城市生成器</a>.
               <div id="mfcgBurgSeedSection">
-                Seed: <input id="mfcgBurgSeed" style="width: 10em" type="number" min="1" max="1e13" step="1" />
+                种子: <input id="mfcgBurgSeed" style="width: 10em" type="number" min="1" max="1e13" step="1" />
                 <i
                   id="regenerateMFCGBurgSeed"
-                  data-tip="Randomize Medieval Fantasy City Generator burg seed"
+                  data-tip="随机种子"
                   class="icon-arrows-cw pointer"
                   style="margin-left: 0.1em"
                 ></i>
               </div>
               <i
                 id="addCustomMFCGBurgLink"
-                data-tip="Provide custom link to the burg map"
+                data-tip="提供到城镇地图的链接"
                 class="icon-pencil pointer"
                 style="margin-left: 0.1em"
               ></i>
@@ -3196,48 +3196,48 @@
         </div>
 
         <div id="burgBottom">
-          <button id="burgGroupShow" data-tip="Show group change section" class="icon-tags"></button>
+          <button id="burgGroupShow" data-tip="显示组" class="icon-tags"></button>
           <div id="burgGroupSection" style="display: none">
-            <button id="burgGroupHide" data-tip="Hide group change section" class="icon-tags"></button>
-            <select id="burgSelectGroup" data-tip="Select a group for this burg" style="width: 10em"></select>
+            <button id="burgGroupHide" data-tip="隐藏组" class="icon-tags"></button>
+            <select id="burgSelectGroup" data-tip="选择组" style="width: 10em"></select>
             <input
               id="burgInputGroup"
               placeholder="new group name"
-              data-tip="Create new Group for the Burg"
+              data-tip="新组名"
               style="display: none; width: 10em"
             />
-            <i id="burgAddGroup" data-tip="Create new group for the burg" class="icon-plus pointer"></i>
-            <i id="burgRemoveGroup" data-tip="Remove selected burg group" class="icon-trash pointer"></i>
+            <i id="burgAddGroup" data-tip="新建组" class="icon-plus pointer"></i>
+            <i id="burgRemoveGroup" data-tip="删除组" class="icon-trash pointer"></i>
           </div>
 
-          <button id="burgStyleShow" data-tip="Show style edit section" class="icon-brush"></button>
+          <button id="burgStyleShow" data-tip="显示样式编辑" class="icon-brush"></button>
           <div id="burgStyleSection" style="display: none">
-            <button id="burgStyleHide" data-tip="Hide style edit section" class="icon-brush"></button>
+            <button id="burgStyleHide" data-tip="隐藏样式编辑" class="icon-brush"></button>
             <button
               id="burgEditLabelStyle"
-              data-tip="Edit label style for burg group in Style Editor"
+              data-tip="在样式编辑器中编辑标签样式"
               class="icon-font"
             ></button>
             <button
               id="burgEditIconStyle"
-              data-tip="Edit icon style for burg group in Style Editor"
+              data-tip="在样式编辑器中编辑图标样式"
               class="icon-dot-circled"
             ></button>
             <button
               id="burgEditAnchorStyle"
-              data-tip="Edit port icon (anchor) style for burg group in Style Editor"
+              data-tip="在样式编辑器中编辑港口图标样式"
               class="icon-anchor"
             ></button>
           </div>
 
-          <button id="burgEditEmblem" data-tip="Edit emblem" class="icon-shield-alt"></button>
-          <button id="burgToggleMFCGMap" data-tip="Toggle MFCG map" class="icon-map"></button>
-          <button id="burgRelocate" data-tip="Relocate burg" class="icon-target"></button>
-          <button id="burglLegend" data-tip="Edit free text notes (legend) for this burg" class="icon-edit"></button>
+          <button id="burgEditEmblem" data-tip="编辑元素" class="icon-shield-alt"></button>
+          <button id="burgToggleMFCGMap" data-tip="切换MFCG贴图" class="icon-map"></button>
+          <button id="burgRelocate" data-tip="重新定位城镇" class="icon-target"></button>
+          <button id="burglLegend" data-tip="编辑城镇的注释（图例）" class="icon-edit"></button>
           <button id="burgLock" class="icon-lock-open" onmouseover="showElementLockTip(event)"></button>
           <button
             id="burgRemove"
-            data-tip="Remove non-capital burg"
+            data-tip="删除非首都城镇"
             data-shortcut="Delete"
             class="icon-trash fastDelete"
           ></button>
@@ -3247,9 +3247,9 @@
       <div id="markerEditor" class="dialog" style="display: none">
         <div id="markerBody" style="padding-bottom: 0.3em">
           <div
-            data-tip="Marker type. Style changes will apply to all markers of the same type. Leave blank if the marker is unique"
+            data-tip="特点类型。样式更改将应用于相同类型的所有特色。如果特色是唯一的，则留空"
           >
-            <div class="label">Type:</div>
+            <div class="label">类型:</div>
             <input id="markerType" style="width: 10.3em" />
           </div>
 
@@ -4712,7 +4712,7 @@
       <div id="notesEditor" class="dialog stable" style="display: none">
         <div style="margin-bottom: 0.3em">
           <strong>Element: </strong>
-          <select id="notesSelect" data-tip="Select element id" style="width: 12em"></select>
+          <select id="notesSelect" data-tip="选择元素 id" style="width: 12em"></select>
           <strong>Element name: </strong>
           <input id="notesName" data-tip="Set element name" autocorrect="off" spellcheck="false" style="width: 16em" />
           <span data-tip="Speak the name. You can change voice and language in options" class="speaker">🔊</span>
