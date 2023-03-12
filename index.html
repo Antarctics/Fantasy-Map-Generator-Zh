@@ -2023,7 +2023,7 @@
             </button>
             <button
               id="regenerateReliefIcons"
-              data-tip="单击以基于当前单元格生物群落和高程重新生成所有地形图标"
+              data-tip="单击以基于当前单元格生物群系和高程重新生成所有地形图标"
             >
               地形图
             </button>
@@ -2325,7 +2325,7 @@
             </div>
 
             <div>
-              <label data-tip="设置降水量-云可以带来的水量。定义河流和生物群落的生成">
+              <label data-tip="设置降水量-云可以带来的水量。定义河流和生物群系的生成">
                 <i data-locked="0" id="lock_prec" class="icon-lock-open"></i>
                 <i>降水量:</i>
                 <input id="precInput" data-stored="prec" type="number" />%
@@ -3488,7 +3488,7 @@
 
           <template id="battlePhases_ambush_attackers">
             <button
-              data-tip="地震阶段。士兵强度降低"
+              data-tip="冲锋阶段。士兵强度降低"
               data-phase="shock"
               class="icon-button-shock"
             ></button>
@@ -3541,7 +3541,7 @@
 
           <template id="battlePhases_landing_defenders">
             <button
-              data-tip="冲击阶段。部队没有做好防御准备"
+              data-tip="冲锋阶段。部队没有做好防御准备"
               data-phase="shock"
               class="icon-button-shock"
             ></button>
@@ -3710,19 +3710,19 @@
 
       <div id="regimentSelectorScreen" class="dialog" style="display: none">
         <div id="regimentSelectorHeader" class="header" style="grid-template-columns: 9em 13em 4em 6em">
-          <div data-tip="Click to sort by state name" class="sortable alphabetically" data-sortby="state">
-            State&nbsp;
+          <div data-tip="单击以按国家名排序" class="sortable alphabetically" data-sortby="state">
+            国家&nbsp;
           </div>
-          <div data-tip="Click to sort by regiment name" class="sortable alphabetically" data-sortby="regiment">
+          <div data-tip="单击以按军团名排序" class="sortable alphabetically" data-sortby="regiment">
             Regiment&nbsp;
           </div>
-          <div data-tip="Click to sort by total military forces" class="sortable" data-sortby="total">Total&nbsp;</div>
+          <div data-tip="单击以按总兵力排序" class="sortable" data-sortby="total">总兵力&nbsp;</div>
           <div
-            data-tip="Click to sort by distance to the battlefield"
+            data-tip="单击以按距战场的距离排序"
             class="sortable icon-sort-number-up"
             data-sortby="distance"
           >
-            Distance&nbsp;
+            距离&nbsp;
           </div>
         </div>
         <div id="regimentSelectorBody" class="table"></div>
@@ -3730,7 +3730,7 @@
 
       <div id="brushesPanel" class="dialog stable" style="display: none">
         <div id="brushesButtons" style="display: inline-block">
-          <button id="brushRaise" data-tip="Raise brush: increase height of cells in radius by Power value">
+          <button id="brushRaise" data-tip="提高笔刷：增加半径中单元格的高度">
             <svg viewBox="15 15 70 70" height="1em" width="1.6em">
               <path d="m20,39 h60 M50,85 v-35 l-12,8 m12,-8 l12,8" fill="none" stroke="#000" stroke-width="5" />
             </svg>
@@ -3738,7 +3738,7 @@
 
           <button
             id="brushElevate"
-            data-tip="Elevate brush: drag to gradually increase height of cells in radius by Power value"
+            data-tip="提高笔刷：拖动以增加半径中单元格的高度"
           >
             <svg viewBox="15 15 70 70" height="1em" width="1.6em">
               <path
@@ -3750,7 +3750,7 @@
             </svg>
           </button>
 
-          <button id="brushLower" data-tip="Lower brush: drag to decrease height of cells in radius by Power value">
+          <button id="brushLower" data-tip="下沉笔刷：拖动以减小半径中单元格的高度">
             <svg viewBox="15 15 70 70" height="1em" width="1.6em">
               <path d="M50,30 v35 l-12,-8 m12,8 l12,-8 M20,78 h60" fill="none" stroke="#000" stroke-width="5" />
             </svg>
@@ -3758,7 +3758,7 @@
 
           <button
             id="brushDepress"
-            data-tip="Depress brush: drag to gradually decrease height of cells in radius by Power value"
+            data-tip="下沉画笔：拖动以逐渐减小半径中单元格的高度"
           >
             <svg viewBox="15 15 70 70" height="1em" width="1.6em">
               <path d="M50,30 v35 l-12,-8 m12,8 l12,-8 M20,63 q30,35 60,0" fill="none" stroke="#000" stroke-width="5" />
@@ -3767,7 +3767,7 @@
 
           <button
             id="brushAlign"
-            data-tip="Align brush: drag to set height of cells in radius to height of the cell at mousepoint"
+            data-tip="对齐笔刷：拖动以将半径中的单元格高度设置为鼠标点处的单元格高度"
           >
             <svg viewBox="15 15 70 70" height="1em" width="1.6em">
               <path d="m20,50 h56 m0,20 h-56" fill="none" stroke="#000" stroke-width="5" />
@@ -3776,7 +3776,7 @@
 
           <button
             id="brushSmooth"
-            data-tip="Smooth brush: drag to level height of cells in radius to height of adjacent cells"
+            data-tip="平滑笔刷：拖动到与相邻单元格高度成半径的单元格高度"
           >
             <svg viewBox="15 15 70 70" height="1em" width="1.6em">
               <path d="m15,60 q15,-15 30,0 q15,15 35,0" fill="none" stroke="#000" stroke-width="5" />
@@ -3785,14 +3785,14 @@
 
           <button
             id="brushDisrupt"
-            data-tip="Disrupt brush: drag to randomize height of cells in radius based on Power value"
+            data-tip="散乱笔刷：拖动以随机化半径中单元格的高度"
           >
             <svg viewBox="15 15 70 70" height="1em" width="1.6em">
               <path d="m15,63 l15,-13 15,20 15,-20 15,19 15,-14" fill="none" stroke="#000" stroke-width="5" />
             </svg>
           </button>
 
-          <button id="brushLine" data-tip="Line: select two points to change heights along the line">
+          <button id="brushLine" data-tip="直线：选择两个点以沿直线更改高度">
             <svg viewBox="0 -5 100 100" height="1em" width="1.6em">
               <path d="M0 90 L100 10" fill="none" stroke="#000" stroke-width="7"></path>
             </svg>
@@ -3800,11 +3800,11 @@
         </div>
 
         <div id="brushesSliders" style="display: none">
-          <div data-tip="Change brush size" data-shortcut="+ (increase), – (decrease)" style="padding-bottom: 1px">
-            <div style="width: 3.2em; display: inline-block"><i>Radius:</i></div>
+          <div data-tip="更改笔刷大小" data-shortcut="+ (increase), – (decrease)" style="padding-bottom: 1px">
+            <div style="width: 3.2em; display: inline-block"><i>半径:</i></div>
             <input
               id="brushRadius"
-              oninput="tip('Brush radius: '+this.value); brushRadiusNumber.value = this.value"
+              oninput="tip('笔刷半径: '+this.value); brushRadiusNumber.value = this.value"
               type="range"
               min="1"
               max="99"
@@ -3813,7 +3813,7 @@
             />
             <input
               id="brushRadiusNumber"
-              oninput="tip('Brush radius: '+this.value); brushRadius.value = this.value"
+              oninput="tip('笔刷半径: '+this.value); brushRadius.value = this.value"
               type="number"
               min="1"
               max="99"
@@ -3823,10 +3823,10 @@
           </div>
 
           <div data-tip="Set the brush power">
-            <div style="width: 3.2em; display: inline-block"><i>Power:</i></div>
+            <div style="width: 3.2em; display: inline-block"><i>强度:</i></div>
             <input
               id="brushPower"
-              oninput="tip('Brush power: '+this.value); brushPowerNumber.value = this.value"
+              oninput="tip('笔刷强度: '+this.value); brushPowerNumber.value = this.value"
               type="range"
               min="1"
               max="10"
@@ -3835,7 +3835,7 @@
             />
             <input
               id="brushPowerNumber"
-              oninput="tip('Brush power: '+this.value); brushPower.value = this.value"
+              oninput="tip('笔刷强度: '+this.value); brushPower.value = this.value"
               type="number"
               min="1"
               max="10"
@@ -3846,11 +3846,11 @@
         </div>
 
         <div id="lineSlider" style="display: none">
-          <div data-tip="Set change power">
-            <div style="width: 3.2em; display: inline-block"><i>Power:</i></div>
+          <div data-tip="设置更改强度">
+            <div style="width: 3.2em; display: inline-block"><i>强度:</i></div>
             <input
               id="linePower"
-              oninput="tip('Line power: '+this.value); linePowerNumber.value = this.value"
+              oninput="tip('直线强度: '+this.value); linePowerNumber.value = this.value"
               type="range"
               min="-100"
               max="100"
@@ -3859,7 +3859,7 @@
             />
             <input
               id="linePowerNumber"
-              oninput="tip('Line power: '+this.value); linePower.value = this.value"
+              oninput="tip('直线强度: '+this.value); linePower.value = this.value"
               type="number"
               min="-100"
               max="100"
@@ -3870,32 +3870,32 @@
         </div>
 
         <div
-          data-tip="Allow brush to change only land cells and hence restrict the coastline modification"
+          data-tip="画笔只改变陆地单元，从而限制海岸线的修改"
           style="margin-bottom: 0.6em"
         >
           <input id="changeOnlyLand" class="checkbox" type="checkbox" />
-          <label for="changeOnlyLand" class="checkbox-label"><i>change only land cells</i></label>
+          <label for="changeOnlyLand" class="checkbox-label"><i>仅更改陆地</i></label>
         </div>
 
         <div id="modifyButtons">
-          <button id="undo" data-tip="Undo the latest action (Ctrl + Z)" class="icon-ccw" disabled></button>
-          <button id="redo" data-tip="Redo the action (Ctrl + Y)" class="icon-cw" disabled></button>
-          <button id="rescaleShow" data-tip="Show rescaler slider" class="icon-exchange"></button>
+          <button id="undo" data-tip="撤消（Ctrl+Z）" class="icon-ccw" disabled></button>
+          <button id="redo" data-tip="恢复（Ctrl+Y）" class="icon-cw" disabled></button>
+          <button id="rescaleShow" data-tip="显示筛选器滑块" class="icon-exchange"></button>
           <button
             id="rescaleCondShow"
-            data-tip="Rescaler: change height if condition is fulfilled"
+            data-tip="筛选器：如果条件满足，则改变高度"
             class="icon-if"
           ></button>
-          <button id="smoothHeights" data-tip="Smooth all heights a bit" class="icon-smooth"></button>
-          <button id="disruptHeights" data-tip="Disrupt (randomize) heights a bit" class="icon-disrupt"></button>
-          <button id="brushClear" data-tip="Set height for all cells to 0 (erase the map)" class="icon-eraser"></button>
+          <button id="smoothHeights" data-tip="平滑高度" class="icon-smooth"></button>
+          <button id="disruptHeights" data-tip="随机化高度" class="icon-disrupt"></button>
+          <button id="brushClear" data-tip="将所有单元格的高度设置为0" class="icon-eraser"></button>
         </div>
 
         <div id="rescaleSection" style="display: none">
-          <button id="rescaleHide" data-tip="Hide rescaler slider" class="icon-exchange"></button>
+          <button id="rescaleHide" data-tip="隐藏筛选器滑块" class="icon-exchange"></button>
           <input
             id="rescaler"
-            data-tip="Change height for all cells"
+            data-tip="更改所有单元格的高度"
             type="range"
             min="-10"
             max="10"
@@ -3906,10 +3906,10 @@
 
         <div
           id="rescaleCondSection"
-          data-tip="If height is greater or equal to X and less or equal to Y, then perform an operation Z with operand V"
+          data-tip="如果高度 ≥ X 且 ≤ Y，则使用操作数 V 执行操作 Z"
           style="display: none"
         >
-          <button id="rescaleCondHide" data-tip="Hide rescaler" class="icon-if"></button>
+          <button id="rescaleCondHide" data-tip="隐藏筛选器" class="icon-if"></button>
           <label>h ≥</label>
           <input id="rescaleLower" value="20" type="number" min="0" max="100" />
           <label>≤</label>
@@ -3923,94 +3923,94 @@
             <option value="exponent">^</option>
           </select>
           <input id="rescaleModifier" type="number" value="0.9" min="0" max="1.5" step="0.01" />
-          <button id="rescaleExecute" data-tip="Click to perform an operation" class="icon-play-circled2"></button>
+          <button id="rescaleExecute" data-tip="单击以执行操作" class="icon-play-circled2"></button>
         </div>
       </div>
 
       <div id="templateEditor" class="dialog stable" style="display: none">
         <div id="templateTop">
-          <i>Select template: </i>
-          <select id="templateSelect" style="width: 16em" data-prev="templateCustom" data-tip="Select base template">
-            <option value="custom" selected>Custom</option>
-            <option value="volcano">Volcano</option>
-            <option value="highIsland">High Island</option>
-            <option value="lowIsland">Low Island</option>
-            <option value="continents">Continents</option>
-            <option value="archipelago">Archipelago</option>
-            <option value="atoll">Atoll</option>
-            <option value="mediterranean">Mediterranean</option>
-            <option value="peninsula">Peninsula</option>
-            <option value="pangea">Pangea</option>
-            <option value="isthmus">Isthmus</option>
-            <option value="shattered">Shattered</option>
-            <option value="taklamakan">Taklamakan</option>
-            <option value="oldWorld">Old World</option>
-            <option value="fractious">Fractious</option>
+          <i>选择模板: </i>
+          <select id="templateSelect" style="width: 16em" data-prev="templateCustom" data-tip="选择基础模板">
+            <option value="custom" selected>自定义</option>
+            <option value="volcano">火山</option>
+            <option value="highIsland">高原</option>
+            <option value="lowIsland">低岛</option>
+            <option value="continents">大陆</option>
+            <option value="archipelago">群岛</option>
+            <option value="atoll">环状珊瑚岛</option>
+            <option value="mediterranean">地中海</option>
+            <option value="peninsula">半岛</option>
+            <option value="pangea">泛大陆</option>
+            <option value="isthmus">地峡</option>
+            <option value="shattered">破散</option>
+            <option value="taklamakan">塔克拉玛干沙漠</option>
+            <option value="oldWorld">旧大陆</option>
+            <option value="fractious">混乱</option>
           </select>
         </div>
         <div id="templateTools">
-          <button data-type="Hill" data-tip="Hill: small blob">H</button>
-          <button data-type="Pit" data-tip="Pit: round depression">P</button>
-          <button data-type="Range" data-tip="Range: elongated elevation">R</button>
-          <button data-type="Trough" data-tip="Trough: elongated depression">T</button>
-          <button data-type="Strait" data-tip="Strait: centered vertical or horizontal depression">S</button>
-          <button data-type="Mask" data-tip="Mask: lower cells near edges or in map center">M</button>
-          <button data-type="Invert" data-tip="Invert heightmap along the axes">I</button>
-          <button data-type="Add" data-tip="Add or subtract value from all heights in range">+</button>
-          <button data-type="Multiply" data-tip="Multiply all heights in range by factor">*</button>
+          <button data-type="Hill" data-tip="山丘：小斑点">H</button>
+          <button data-type="Pit" data-tip="天坑：圆形凹陷">P</button>
+          <button data-type="Range" data-tip="山脉:提高海拔">R</button>
+          <button data-type="Trough" data-tip="低谷：细长凹陷">T</button>
+          <button data-type="Strait" data-tip="海峡：中心垂直或水平凹陷">S</button>
+          <button data-type="Mask" data-tip="遮罩：边缘或地图中心的低海拔单元格(?)">M</button>
+          <button data-type="Invert" data-tip="沿轴反转高度贴图">I</button>
+          <button data-type="Add" data-tip="将范围内的所有高度添加或减去值">+</button>
+          <button data-type="Multiply" data-tip="将范围内的所有高度乘以系数">*</button>
           <button
             data-type="Smooth"
-            data-tip="Smooth the map replacing cell heights by an average values of its neighbors"
+            data-tip="平滑地图，用其邻近的平均值替换单元格高度"
           >
             ~
           </button>
         </div>
         <div id="templateBody" data-changed="0" class="table" style="padding: 2px 0">
           <div data-type="Hill">
-            <div class="icon-check" data-tip="Click to skip the step"></div>
-            <div style="width: 4em">Hill</div>
-            <i class="icon-trash-empty pointer" data-tip="Remove the step"></i>
-            <i class="icon-resize-vertical" data-tip="Drag to reorder"></i>
+            <div class="icon-check" data-tip="单击以跳过该步骤"></div>
+            <div style="width: 4em">山丘</div>
+            <i class="icon-trash-empty pointer" data-tip="移除步骤"></i>
+            <i class="icon-resize-vertical" data-tip="拖动以重新排序"></i>
             <span
-              >y:<input class="templateY" data-tip="Y axis position in percentage (minY-maxY or Y)" value="47-53"
+              >y:<input class="templateY" data-tip="Y轴位置百分比(最小Y- 最大Y 或 Y)" value="47-53"
             /></span>
             <span
-              >x:<input class="templateX" data-tip="X axis position in percentage (minX-maxX or X)" value="65-75"
+              >x:<input class="templateX" data-tip="X轴位置百分比(最小X- 最大X 或 X)" value="65-75"
             /></span>
             <span
               >h:<input
                 class="templateHeight"
-                data-tip="Blob maximum height, use hyphen to get a random number in range"
+                data-tip="最大高度，使用连字符（-）获取范围内的随机数"
                 value="90-100"
             /></span>
             <span
               >n:<input
                 class="templateCount"
-                data-tip="Blobs to add, use hyphen to get a random number in range"
+                data-tip="提升高度，使用连字符（-）获取范围内的随机数"
                 value="1"
             /></span>
           </div>
         </div>
         <div id="templateBottom">
-          <button id="templateRun" data-tip="Execute the template" class="icon-play-circled2"></button>
-          <button id="templateUndo" data-tip="Undo the latest action" class="icon-ccw" disabled></button>
-          <button id="templateRedo" data-tip="Redo the action" class="icon-cw" disabled></button>
-          <button id="templateSave" data-tip="Download the template as a text file" class="icon-download"></button>
-          <button id="templateLoad" data-tip="Open previously downloaded template" class="icon-upload"></button>
+          <button id="templateRun" data-tip="执行模板" class="icon-play-circled2"></button>
+          <button id="templateUndo" data-tip="撤消" class="icon-ccw" disabled></button>
+          <button id="templateRedo" data-tip="恢复" class="icon-cw" disabled></button>
+          <button id="templateSave" data-tip="下载模板" class="icon-download"></button>
+          <button id="templateLoad" data-tip="加载模板" class="icon-upload"></button>
           <button
             id="templateCA"
-            data-tip="Find or share custom template on Cartography Assets portal"
+            data-tip="在制图资源网站上查找或共享自定义模板"
             class="icon-drafting-compass"
             onclick="openURL('https://cartographyassets.com/asset-category/specific-assets/azgaars-generator/templates')"
           ></button>
           <button
             id="templateTutorial"
-            data-tip="Open Template Editor Tutorial"
+            data-tip="打开模板编辑器教程"
             class="icon-info"
             onclick="wiki('Heightmap-template-editor')"
           ></button>
           <label
-            data-tip="Lock seed (click on lock icon) if you want template to generate the same heightmap each time"
+            data-tip="如果希望模板每次生成相同的高度图，请锁定种子（单击锁定图标）"
           >
             Seed: <input id="templateSeed" value="" type="number" min="1" max="999999999" step="1" style="width: 8em" />
             <i data-locked="0" id="lock_templateSeed" class="icon-lock-open"></i>
@@ -4020,57 +4020,57 @@
 
       <div id="imageConverter" class="dialog stable" style="display: none">
         <div id="convertImageButtons">
-          <button id="convertImageLoad" data-tip="Load image to convert" class="icon-upload"></button>
+          <button id="convertImageLoad" data-tip="加载要转换的图像" class="icon-upload"></button>
           <button
             id="convertAutoLum"
-            data-tip="Auto-assign colors based on liminosity (good for monochrome images)"
+            data-tip="自动分配颜色（适用于单色图像）"
             class="icon-adjust"
           ></button>
           <button
             id="convertAutoHue"
-            data-tip="Auto-assign colors based on hue (good for colored images)"
+            data-tip="自动指定颜色（适用于彩色图像）"
             class="icon-paint-roller"
           ></button>
           <button
             id="convertAutoFMG"
-            data-tip="Auto-assign colors using generator scheme (for exported colored heightmaps)"
+            data-tip="使用生成器方案自动指定颜色（用于导出的彩色高度贴图）"
             class="icon-layer-group"
           ></button>
           <button id="convertColorsButton" data-tip="Set maximum number of colors" class="icon-signal"></button>
           <input id="convertColors" value="100" style="display: none" />
           <button
             id="convertCancel"
-            data-tip="Cancel the conversion. Previous heightmap will be restored"
+            data-tip="取消转换。将恢复以前的高度图"
             class="icon-cancel"
           ></button>
         </div>
 
-        <div data-tip="Set opacity of the loaded image" style="padding-top: 0.4em">
+        <div data-tip="设置加载图像的不透明度" style="padding-top: 0.4em">
           <i>Overlay opacity:</i><br />
           <input id="convertOverlay" type="range" min="0" max="1" step=".01" value="0" style="width: 12.6em" />
           <input id="convertOverlayNumber" type="number" min="0" max="1" step=".01" value="0" style="width: 4.2em" />
         </div>
 
-        <div data-tip="Select a color below and assign a height value for it" id="colorsSelect" style="display: none">
+        <div data-tip="选择下面的颜色并为其指定高度值" id="colorsSelect" style="display: none">
           <i>Set height: </i>
           <span id="colorsSelectValue"></span>
           <span>(<span id="colorsSelectFriendly">0</span>)</span><br />
           <div id="imageConverterPalette"></div>
         </div>
 
-        <div data-tip="Select a color to re-assign the height value" id="colorsAssigned" style="display: none">
+        <div data-tip="选择一种颜色以重新指定高度值" id="colorsAssigned" style="display: none">
           <i>Assigned colors (<span id="colorsAssignedNumber"></span>):</i>
           <div id="colorsAssignedContainer" class="colorsContainer"></div>
         </div>
 
-        <div data-tip="Select a color to assign a height value" id="colorsUnassigned" style="display: none">
+        <div data-tip="选择颜色以指定高度值" id="colorsUnassigned" style="display: none">
           <i>Unassigned colors (<span id="colorsUnassignedNumber"></span>):</i>
           <div id="colorsUnassignedContainer" class="colorsContainer"></div>
         </div>
 
         <button
           id="convertComplete"
-          data-tip="Complete the conversion. All unassigned colors will be considered as ocean"
+          data-tip="完成转换。所有未分配的颜色将被视为海洋色"
           style="margin: 0.4em 0"
           class="glow"
         >
@@ -4080,21 +4080,21 @@
 
       <div id="biomesEditor" class="dialog stable" style="display: none">
         <div id="biomesHeader" class="header" style="grid-template-columns: 13em 7em 5em 5em 7em">
-          <div data-tip="Click to sort by biome name" class="sortable alphabetically" data-sortby="name">
+          <div data-tip="单击以按生物群系名称排序" class="sortable alphabetically" data-sortby="name">
             Biome&nbsp;
           </div>
-          <div data-tip="Click to sort by biome habitability" class="sortable hide" data-sortby="habitability">
+          <div data-tip="单击以按生物群系宜居度性排序" class="sortable hide" data-sortby="habitability">
             Habitability&nbsp;
           </div>
           <div
-            data-tip="Click to sort by biome cells number"
+            data-tip="单击以按生物群系单元数排序"
             class="sortable hide icon-sort-number-down"
             data-sortby="cells"
           >
             Cells&nbsp;
           </div>
-          <div data-tip="Click to sort by biome area" class="sortable hide" data-sortby="area">Area&nbsp;</div>
-          <div data-tip="Click to sort by biome population" class="sortable hide" data-sortby="population">
+          <div data-tip="单击以按生物群系范围排序" class="sortable hide" data-sortby="area">Area&nbsp;</div>
+          <div data-tip="单击以按生物群系生物量排序" class="sortable hide" data-sortby="population">
             Population&nbsp;
           </div>
         </div>
@@ -4102,40 +4102,40 @@
         <div id="biomesBody" class="table" data-type="absolute"></div>
 
         <div id="biomesFooter" class="totalLine">
-          <div data-tip="Number of land biomes" style="margin-left: 12px">
-            Biomes:&nbsp;<span id="biomesFooterBiomes">0</span>
+          <div data-tip="陆地生物群系数量" style="margin-left: 12px">
+            群系:&nbsp;<span id="biomesFooterBiomes">0</span>
           </div>
-          <div data-tip="Total land cells number" style="margin-left: 12px">
-            Cells:&nbsp;<span id="biomesFooterCells">0</span>
+          <div data-tip="陆地单元格总数" style="margin-left: 12px">
+            单元数:&nbsp;<span id="biomesFooterCells">0</span>
           </div>
-          <div data-tip="Total land area" style="margin-left: 12px">
-            Land Area:&nbsp;<span id="biomesFooterArea">0</span>
+          <div data-tip="陆地范围总数" style="margin-left: 12px">
+            范围:&nbsp;<span id="biomesFooterArea">0</span>
           </div>
-          <div data-tip="Total population" style="margin-left: 12px">
-            Population:&nbsp;<span id="biomesFooterPopulation">0</span>
+          <div data-tip="总人口数" style="margin-left: 12px">
+            人口:&nbsp;<span id="biomesFooterPopulation">0</span>
           </div>
         </div>
 
         <div id="biomesBottom">
-          <button id="biomesEditorRefresh" data-tip="Refresh the Editor" class="icon-cw"></button>
-          <button id="biomesEditStyle" data-tip="Edit biomes style in Style Editor" class="icon-adjust"></button>
-          <button id="biomesLegend" data-tip="Toggle Legend box" class="icon-list-bullet"></button>
+          <button id="biomesEditorRefresh" data-tip="刷新编辑器" class="icon-cw"></button>
+          <button id="biomesEditStyle" data-tip="在样式编辑器中编辑生物群落样式" class="icon-adjust"></button>
+          <button id="biomesLegend" data-tip="切换图例框" class="icon-list-bullet"></button>
           <button
             id="biomesPercentage"
-            data-tip="Toggle percentage / absolute values views"
+            data-tip="切换百分比/绝对值视图"
             class="icon-percent"
           ></button>
           <button
             id="biomesManually"
-            data-tip="Manually re-assign biomes to not follow the default moisture/temperature pattern"
+            data-tip="手动重新分配生物群系，不遵循默认的湿度/温度模式"
             class="icon-brush"
           ></button>
           <div id="biomesManuallyButtons" style="display: none">
-            <label data-tip="Change brush size" data-shortcut="+ (increase), – (decrease)" class="italic"
-              >Brush radius:
+            <label data-tip="更改笔刷大小" data-shortcut="+ (increase), – (decrease)" class="italic"
+              >笔刷半径:
               <input
                 id="biomesManuallyBrush"
-                oninput="tip('Brush radius: '+this.value); biomesManuallyBrushNumber.value = this.value"
+                oninput="tip('笔刷半径: '+this.value); biomesManuallyBrushNumber.value = this.value"
                 type="range"
                 min="5"
                 max="99"
@@ -4144,30 +4144,30 @@
               />
               <input
                 id="biomesManuallyBrushNumber"
-                oninput="tip('Brush radius: '+this.value); biomesManuallyBrush.value = this.value"
+                oninput="tip('笔刷半径: '+this.value); biomesManuallyBrush.value = this.value"
                 type="number"
                 min="5"
                 max="99"
                 value="15"
               /> </label
             ><br />
-            <button id="biomesManuallyApply" data-tip="Apply current assignment" class="icon-check"></button>
-            <button id="biomesManuallyCancel" data-tip="Cancel assignment" class="icon-cancel"></button>
+            <button id="biomesManuallyApply" data-tip="应用分配" class="icon-check"></button>
+            <button id="biomesManuallyCancel" data-tip="取消分配" class="icon-cancel"></button>
           </div>
-          <button id="biomesAdd" data-tip="Add a custom biome" class="icon-plus"></button>
+          <button id="biomesAdd" data-tip="添加自定义生物群系" class="icon-plus"></button>
           <button
             id="biomesRestore"
-            data-tip="Restore the defaults and re-define biomes based on current moisture and temperature"
+            data-tip="恢复默认值并根据当前湿度和温度重新生成生物群系"
             class="icon-history"
           ></button>
           <button
             id="biomesRegenerateReliefIcons"
-            data-tip="Regenerate relief icons based on current biomes and elevation"
+            data-tip="基于当前生物群系和海拔重新生成地形图标"
             class="icon-tree"
           ></button>
           <button
             id="biomesExport"
-            data-tip="Save biomes-related data as a text file (.csv)"
+            data-tip="将生物群系相关数据保存为文本文件（.csv）"
             class="icon-download"
           ></button>
         </div>
@@ -4175,10 +4175,10 @@
 
       <div id="stateNameEditor" class="dialog" data-state="0" style="display: none">
         <div>
-          <div data-tip="State short name" class="label">Short name:</div>
+          <div data-tip="国家简称" class="label">简称:</div>
           <input
             id="stateNameEditorShort"
-            data-tip="Type to change the short name"
+            data-tip="输入以更改简称"
             autocorrect="off"
             spellcheck="false"
             style="width: 11em"
@@ -4186,95 +4186,95 @@
           <span data-tip="发音。您可以在选项中更改语音和语言" class="speaker">🔊</span>
           <span
             id="stateNameEditorShortCulture"
-            data-tip="Generate culture-specific name"
+            data-tip="生成特定区域文化的名称"
             class="icon-book pointer"
           ></span>
-          <span id="stateNameEditorShortRandom" data-tip="Generate random name" class="icon-globe pointer"></span>
+          <span id="stateNameEditorShortRandom" data-tip="生成随机名称" class="icon-globe pointer"></span>
         </div>
 
         <div data-tip="Select form name">
-          <div data-tip="State form name" class="label">Form name:</div>
+          <div data-tip="政体名称" class="label">政体:</div>
           <select id="stateNameEditorSelectForm" style="width: 11em">
-            <option value="">blank</option>
-            <optgroup label="Monarchy">
-              <option value="Beylik">Beylik</option>
-              <option value="Despotate">Despotate</option>
-              <option value="Dominion">Dominion</option>
-              <option value="Duchy">Duchy</option>
-              <option value="Emirate">Emirate</option>
-              <option value="Empire">Empire</option>
-              <option value="Horde">Horde</option>
-              <option value="Grand Duchy">Grand Duchy</option>
-              <option value="Heptarchy">Heptarchy</option>
-              <option value="Khaganate">Khaganate</option>
-              <option value="Khanate">Khanate</option>
-              <option value="Kingdom">Kingdom</option>
-              <option value="Marches">Marches</option>
-              <option value="Principality">Principality</option>
-              <option value="Satrapy">Satrapy</option>
-              <option value="Shogunate">Shogunate</option>
-              <option value="Sultanate">Sultanate</option>
-              <option value="Tsardom">Tsardom</option>
-              <option value="Ulus">Ulus</option>
-              <option value="Viceroyalty">Viceroyalty</option>
+            <option value="">无</option>
+            <optgroup label="君主制">
+              <option value="Beylik">[土]辖区/option>
+              <option value="Despotate">暴君</option>
+              <option value="Dominion">领地</option>
+              <option value="Duchy">公国</option>
+              <option value="Emirate">酋长国</option>
+              <option value="Empire">帝国</option>
+              <option value="Horde">部落</option>
+              <option value="Grand Duchy">大公国</option>
+              <option value="Heptarchy">[英]七王国</option>
+              <option value="Khaganate">[可汗]帝国</option>
+              <option value="Khanate">可汗国</option>
+              <option value="Kingdom">王国</option>
+              <option value="Marches">[英]边界</option>
+              <option value="Principality">侯国</option>
+              <option value="Satrapy">总督辖地</option>
+              <option value="Shogunate">幕府</option>
+              <option value="Sultanate">苏丹国</option>
+              <option value="Tsardom">独裁</option>
+              <option value="Ulus">[蒙]兀鲁思</option>
+              <option value="Viceroyalty">总督</option>
             </optgroup>
-            <optgroup label="Republic">
-              <option value="Chancellery">Chancellery</option>
-              <option value="City-state">City-state</option>
-              <option value="Diarchy">Diarchy</option>
-              <option value="Federation">Federation</option>
-              <option value="Free City">Free City</option>
-              <option value="Most Serene Republic">Most Serene Republic</option>
-              <option value="Oligarchy">Oligarchy</option>
-              <option value="Protectorate">Protectorate</option>
-              <option value="Republic">Republic</option>
-              <option value="Tetrarchy">Tetrarchy</option>
-              <option value="Trade Company">Trade Company</option>
-              <option value="Triumvirate">Triumvirate</option>
+            <optgroup label="共和国">
+              <option value="Chancellery">总理</option>
+              <option value="City-state">城邦</option>
+              <option value="Diarchy">两头政权</option>
+              <option value="Federation">联邦</option>
+              <option value="Free City">自由城邦</option>
+              <option value="Most Serene Republic">威尼斯共和国</option>
+              <option value="Oligarchy">寡头政治</option>
+              <option value="Protectorate">摄政政府</option>
+              <option value="Republic">共和国</option>
+              <option value="Tetrarchy">四帝共治</option>
+              <option value="Trade Company">贸易公司</option>
+              <option value="Triumvirate">三方统治</option>
             </optgroup>
-            <optgroup label="Union">
-              <option value="Confederacy">Confederacy</option>
-              <option value="Confederation">Confederation</option>
-              <option value="Conglomerate">Conglomerate</option>
-              <option value="Commonwealth">Commonwealth</option>
-              <option value="League">League</option>
-              <option value="Union">Union</option>
-              <option value="United Hordes">United Hordes</option>
-              <option value="United Kingdom">United Kingdom</option>
-              <option value="United Provinces">United Provinces</option>
-              <option value="United Republic">United Republic</option>
-              <option value="United States">United States</option>
-              <option value="United Tribes">United Tribes</option>
+            <optgroup label="协会">
+              <option value="Confederacy">邦联</option>
+              <option value="Confederation">联邦</option>
+              <option value="Conglomerate">企业集团</option>
+              <option value="Commonwealth">英联邦</option>
+              <option value="League">联合会</option>
+              <option value="Union">协会</option>
+              <option value="United Hordes">联合[]部落</option>
+              <option value="United Kingdom">联合王国</option>
+              <option value="United Provinces">联合省份</option>
+              <option value="United Republic">联合共和</option>
+              <option value="United States">联合国</option>
+              <option value="United Tribes">联合部落</option>
             </optgroup>
-            <optgroup label="Theocracy">
-              <option value="Bishopric">Bishopric</option>
-              <option value="Brotherhood">Brotherhood</option>
-              <option value="Caliphate">Caliphate</option>
-              <option value="Diocese">Diocese</option>
-              <option value="Divine Duchy">Divine Duchy</option>
-              <option value="Divine Grand Duchy">Divine Grand Duchy</option>
-              <option value="Divine Principality">Divine Principality</option>
-              <option value="Divine Kingdom">Divine Kingdom</option>
-              <option value="Divine Empire">Divine Empire</option>
-              <option value="Eparchy">Eparchy</option>
-              <option value="Exarchate">Exarchate</option>
-              <option value="Holy State">Holy State</option>
-              <option value="Imamah">Imamah</option>
-              <option value="Patriarchate">Patriarchate</option>
-              <option value="Theocracy">Theocracy</option>
+            <optgroup label="">
+              <option value="Bishopric">主教</option>
+              <option value="Brotherhood">兄弟会</option>
+              <option value="Caliphate">阿拉伯帝国</option>
+              <option value="Diocese">教区</option>
+              <option value="Divine Duchy">神圣公国</option>
+              <option value="Divine Grand Duchy">神圣大公国</option>
+              <option value="Divine Principality">神圣侯国</option>
+              <option value="Divine Kingdom">神圣王国</option>
+              <option value="Divine Empire">神圣帝国</option>
+              <option value="Eparchy">大主教管区</option>
+              <option value="Exarchate">总督区</option>
+              <option value="Holy State">梵蒂冈</option>
+              <option value="Imamah">伊斯兰教长国</option>
+              <option value="Patriarchate">主教长制</option>
+              <option value="Theocracy">神治国</option>
             </optgroup>
-            <optgroup label="Anarchy">
-              <option value="Commune">Commune</option>
+            <optgroup label="无政府">
+              <option value="Commune">公社</option>
               <option value="Community">Community</option>
-              <option value="Council">Council</option>
-              <option value="Free Territory">Free Territory</option>
-              <option value="Tribes">Tribes</option>
+              <option value="Council">委员会</option>
+              <option value="Free Territory">自由领土</option>
+              <option value="Tribes">部落</option>
             </optgroup>
           </select>
           <input
             id="stateNameEditorCustomForm"
             placeholder="type form name"
-            data-tip="Enter custom form name"
+            data-tip="输入自定义政体名称"
             style="display: none; width: 11em"
           />
           <span
